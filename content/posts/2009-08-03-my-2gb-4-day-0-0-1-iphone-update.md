@@ -13,6 +13,8 @@ tags:
   - "vodafone"
 comment_id: "170"
 comment_count: 2
+pingback_id: "170"
+pingback_count: 1
 ---
 A few days ago, [Apple](http://apple.com) released version [3.0.1](http://support.apple.com/kb/HT3754) of the iPhone OS, which addressed a pretty major SMS vulnerability.  When Olyvia tried updating her 3GS to 3.0.1, something went wrong.  The iPhone entered "Recovery Mode", which means that it displays an image indicating that you need to connect it to iTunes, and you can't do anything else (no phone calls, no iPod, no applications - absolutely nothing).  Connecting the phone to iTunes prompted a message indicating that the phone needed to be recovered - doing so downloaded the 3.0.1 update, and then got stuck on the "Verifying Restore with Apple" step for a long time, until it would finally fail with error "3104".  This process could then be repeated, with the same results.
 What this meant in practice was that the phone was bricked as of last Friday.  **An update should never be able to brick a (legitimate, not jailbroken) phone!** Even more, failing to verify a restore with Apple should never leave the phone in a broken state.

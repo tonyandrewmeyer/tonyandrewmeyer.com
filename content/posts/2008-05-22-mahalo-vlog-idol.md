@@ -12,6 +12,8 @@ tags:
   - "vlog"
 comment_id: "81"
 comment_count: 11
+pingback_id: "81"
+pingback_count: 5
 ---
 **Update**: There's now [a proper place to vast a real (presumably non-binding) vote](http://www.mahalodaily.com/2008/05/22/md127-mahalo-vlog-idol-voting-and-reno-911-interview/).  Go to it!
 I listen to a lot of different podcasts, but watch very few (I have a lot of ear-time free, but not much eye-time).

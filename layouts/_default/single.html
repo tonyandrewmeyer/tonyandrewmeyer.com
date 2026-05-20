@@ -21,5 +21,9 @@
   {{ if .Params.comment_id }}
     {{ partial "comments.html" . }}
   {{ end }}
+
+  {{ if .Params.pingback_id }}
+    {{ partial "pingbacks.html" . }}
+  {{ end }}
 </article>
 {{ end }}

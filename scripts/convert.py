@@ -103,7 +103,7 @@ def main(xml_path):
     tree = ET.parse(xml_path)
     channel = tree.getroot().find("channel")
 
-    posts = pages = comments_total = 0
+    posts = pages = comments_total = pingbacks_total = 0
     menu = []
 
     for item in channel.findall("item"):
@@ -146,15 +146,22 @@ def main(xml_path):
             elif domain == "post_tag":
                 tags.append(val)
 
-        # comments (approved only)
+        # comments (approved only); pingbacks/trackbacks kept separately
         clist = []
+        plist = []
         for c in item.findall("wp:comment", NS):
             if txt(c, "wp:comment_approved") != "1":
                 continue
+            cdate = parse_wp_date(txt(c, "wp:comment_date"))
             ctype = txt(c, "wp:comment_type")
             if ctype in ("pingback", "trackback"):
+                plist.append({
+                    "title": unescape(txt(c, "wp:comment_author").strip()),
+                    "url": txt(c, "wp:comment_author_url").strip(),
+                    "date": cdate.strftime("%Y-%m-%dT%H:%M:%S+12:00") if cdate else "",
+                    "kind": ctype,
+                })
                 continue
-            cdate = parse_wp_date(txt(c, "wp:comment_date"))
             clist.append({
                 "id": int(txt(c, "wp:comment_id") or 0),
                 "author": unescape(txt(c, "wp:comment_author").strip()),
@@ -169,6 +176,12 @@ def main(xml_path):
                       "w", encoding="utf-8") as fh:
                 json.dump(clist, fh, ensure_ascii=False, indent=1)
             comments_total += len(clist)
+        if plist:
+            plist.sort(key=lambda x: x["date"])
+            with open(os.path.join(ROOT, "data/pingbacks", f"{post_id}.json"),
+                      "w", encoding="utf-8") as fh:
+                json.dump(plist, fh, ensure_ascii=False, indent=1)
+            pingbacks_total += len(plist)
 
         # front matter
         fm = ["---"]
@@ -189,6 +202,9 @@ def main(xml_path):
         if clist:
             fm.append(f"comment_id: {yaml_quote(post_id)}")
             fm.append(f"comment_count: {len(clist)}")
+        if plist:
+            fm.append(f"pingback_id: {yaml_quote(post_id)}")
+            fm.append(f"pingback_count: {len(plist)}")
         fm.append("---\n")
         out = "\n".join(fm) + body + "\n"
 
@@ -213,7 +229,7 @@ def main(xml_path):
             fh.write(f"{url}\t{media_map[url]}\n")
 
     print(f"posts={posts} pages={pages} comments={comments_total} "
-          f"menu={len(menu)} media_refs={len(media_map)}")
+          f"pingbacks={pingbacks_total} menu={len(menu)} media_refs={len(media_map)}")
 
 
 if __name__ == "__main__":

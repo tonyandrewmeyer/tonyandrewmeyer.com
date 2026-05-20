@@ -5,6 +5,8 @@ slug: "ironpython-course-notes-the-plan"
 categories:
   - "teaching"
   - "Work"
+pingback_id: "159"
+pingback_count: 1
 ---
 Since I decided to use [IronPython](http://ironpython.codeplex.com/) as the programming language for teaching D520 at [Northtec](http://northtec.ac.nz), I've planned on putting my course material online so that anyone else planning on using IronPython in teaching can make whatever use of it they can.  There won't be a huge amount of material, especially in this first year, and especially since I managed to find an excellent [textbook](http://ironpythoninaction.com) to use, but there will be some exercises, assignments, an exam, and so forth.  Each year I teach a course I add new material, and while some material is replaced or removed, usually the old material stays, so the amount of material gradually increases.
 What I haven't been able to decide is how to put this material online (the students have access to it via a [Moodle](http://moodle.org/) installation, but I don't want to make that publicly available).  I toyed with the idea of putting it up in wiki format (but that seemed like a reasonable amount of work and I doubt there will be contributions from other people), with using [iWeb](http://www.apple.com/ilife) to create a small dedicated site (mostly to play around with iWeb, which I have never really used, but that seemed like a lot of unnecessary work), or with putting it on [Google Docs](http://docs.google.com) and sharing it that way (but I write the material in [Pages](http://apple.com/ilife) and publish as PDF, so that doesn't suit well, since I'd have to convert to Word then to Google Docs).

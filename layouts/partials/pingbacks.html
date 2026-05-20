@@ -1,0 +1,14 @@
+{{ $list := index .Site.Data.pingbacks .Params.pingback_id }}
+{{ with $list }}
+  <section class="pingbacks" id="pingbacks">
+    <h2>Linked from</h2>
+    <ul class="pingback-list">
+      {{ range . }}
+        <li class="pingback">
+          {{ if .url }}<a href="{{ .url }}" rel="nofollow noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+          {{ with .date }}<time class="pingback-date" datetime="{{ . }}">{{ (time.AsTime .).Format "2 January 2006" }}</time>{{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

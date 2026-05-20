@@ -7,6 +7,8 @@ categories:
   - "Old"
 comment_id: "7"
 comment_count: 6
+pingback_id: "7"
+pingback_count: 3
 ---
 Like many people, I deal with a lot of email every day. Something that makes it much easier to deal with is when people quote properly. Here are some guidelines (originally prepared for 139.177 / 119.177) for effective email quoting.
 Quoting works best if you work with plain text email and not HTML - many people prefer this, anyway, so it's a good idea to stick with it unless you have a good reason not to. There are many varients of good quoting styles, only one of which is presented here. It doesn't really matter which you use, as long as you use one.

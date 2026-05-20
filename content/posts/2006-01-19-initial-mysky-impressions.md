@@ -6,6 +6,8 @@ categories:
   - "MySky"
 comment_id: "19"
 comment_count: 7
+pingback_id: "19"
+pingback_count: 3
 ---
 It's been about 48 hours since [I had my MySky box installed](http://tonyandrewmeyer.wordpress.com/2006/01/19/getting-mysky/), so I thought I'd note down a few initial impressions.
 Overall, it's pretty mixed (it does seem like a 1999 system, although I have never used the original ReplayTV or TiVo). While some things are definitely good, and it'll certainly be much better than the old system, there are many things that are bad (I guess four years isn't long enough to iron out the bugs), and I'm not certain yet whether I'd recommend it to anyone, given the high price tag. Hopefully software updates will take care of some of these problems.

@@ -5,6 +5,8 @@ slug: "universal-student-allowances-a-better-solution"
 categories:
   - "Old"
   - "Politics"
+pingback_id: "11"
+pingback_count: 1
 ---
 Students' Associations, like my own [ASA](http://www.asa.ac.nz) and the [NZUSA](http://www.students.org.nz/), are continually pushing for a "universal student allowance". This is quite clearly an unworkable solution - not even the [Labour Party](http://www.labour.org.nz) is in favour of it - and nor is it a desirable one.
 [Note that throughout this document, student refers to tertiary students. Secondary, primary, and pre-primary students have other support mechanisms.]

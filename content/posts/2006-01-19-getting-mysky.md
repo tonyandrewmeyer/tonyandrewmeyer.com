@@ -6,6 +6,8 @@ categories:
   - "MySky"
 comment_id: "18"
 comment_count: 1
+pingback_id: "18"
+pingback_count: 1
 ---
 New Zealand's [SkyTV](http://www.skytv.co.nz) finally got around to introducing a [PVR/PDR](http://en.wikipedia.org/wiki/Digital_video_recorder) (a la [TiVo](http://www.tivo.com)), which goes by the not-particularly-great name "MySky".
  Three and half years ago, I wrote to Sky's product manager, asking if they planned to make a PVR, and if not, suggesting that they did (with an explanation of why it would be a good idea). I was pretty interested in one based on all that I'd heard about TiVo etc, but didn't really feel like spending the time creating my own, especially since it would have to work with the Sky system somehow (e.g. send IR to change channels).

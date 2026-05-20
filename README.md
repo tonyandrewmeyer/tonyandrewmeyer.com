@@ -1,7 +1,8 @@
 # tonyandrewmeyer.com
 
 Static site (Hugo) migrated from WordPress.com. Posts are markdown; old
-comments are preserved read-only; permalinks match the original site.
+comments and pingbacks are preserved read-only; permalinks match the
+original site.
 
 ## Local development
 
@@ -18,6 +19,7 @@ Install Hugo **extended** (>= 0.148): https://gohugo.io/installation/
 | `content/posts/` | 187 posts, one markdown file each (`YYYY-MM-DD-slug.md`) |
 | `content/archive.md` | full chronological archive page |
 | `data/comments/*.json` | preserved comments, keyed by original post id |
+| `data/pingbacks/*.json` | preserved pingbacks ("Linked from"), keyed by post id |
 | `data/menu_extra.json` | external "Elsewhere" links (footer) |
 | `layouts/` | the theme (hand-rolled, no external dependency) |
 | `static/uploads/` | media (see below) |

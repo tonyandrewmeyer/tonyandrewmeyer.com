@@ -58,6 +58,11 @@ blockquote { margin: 1rem 0; padding: .2rem 1rem; border-left: 3px solid var(--b
 .comment-date { color: var(--muted); margin-left: .5rem; }
 .comment-body p:first-child { margin-top: .2rem; }
 
+.pingbacks { margin-top: 2.5rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.pingback-list { list-style: none; padding: 0; }
+.pingback { padding: .3rem 0; font-size: .92rem; }
+.pingback-date { color: var(--muted); font-size: .8rem; margin-left: .5rem; }
+
 .site-footer { border-top: 1px solid var(--border); padding: 1.5rem 0; margin-top: 2rem; font-size: .85rem; color: var(--muted); }
 .links-out { display: flex; flex-wrap: wrap; gap: .3rem .9rem; margin-bottom: .6rem; }
 .links-out-label { font-weight: 600; }

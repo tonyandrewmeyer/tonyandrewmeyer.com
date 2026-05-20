@@ -15,6 +15,8 @@ tags:
   - "vodafone"
 comment_id: "93"
 comment_count: 2
+pingback_id: "93"
+pingback_count: 1
 ---
 Vodafone, who I used to think was an ok company, bought and then subsumed ihug, who once was a good company (but had previously sunk to terrible depths). Ihug did all sorts of nutty side ventures, but generally was a company specialising in Internet access and phone calls.
 I called Vodafone yesterday, and got a "sorry, we are experiencing high call volume. Please call back" message. And then it hung up! No queue, no way to set up a call **from** Vodafone back to me to help. Just hanging up on me.

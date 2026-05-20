@@ -9,6 +9,8 @@ tags:
   - "review"
   - "scifi"
   - "short"
+pingback_id: "124"
+pingback_count: 1
 ---
 For some time, I was posting my mini-reviews on Pownce, which seemed to suit the short format .  I've mostly switched to using [Twitter](http://twitter.com/tonyandrewmeyer) instead of Pownce now, but 140 characters is a bit too short.  I don't really want to create a new account somewhere else, so I guess they can go here for now.  Maybe I'll start using one of the 'library' sites at some point, and switch to there, or maybe I'll get my [Delicious Library](http://delicious-monster.com) -> web system a bit more automated again and integrate it there somehow.
 So, since it's been a while, there's a bit of a backlog.  Firstly, *Resurrection Inc.*, by [Kevin K. Anderson](http://www.wordfire.com/).

@@ -5,6 +5,8 @@ slug: "honeypot-success"
 categories:
   - "spam"
   - "Work"
+pingback_id: "28"
+pingback_count: 1
 ---
 Nearly exactly a year after I donated an MX entry to [Project Honeypot](http://projecthoneypot.org), it was used to catch a previously [unknown harvester](http://www.projecthoneypot.org/i_7d72f545a4b24a982df0131e3b0b9f21) (Project Honeypot sends an email out to let you know that this has happened). The MX is public, so it could have been harvested from my site (not this one, or the [Massey](http://www.massey.ac.nz/%7Etameyer) one, or the [ihug](http://homepages.ihug.co.nz/%7Eta-meyer) one) or from anyone else's that participates in Project Honeypot.
 It's interesting that it took a year (and two days) for this to happen. Does that mean that Project Honeypot has a really large number of MX's compared to the number of new harvesters arriving? I like that theory more than the one that suggests that there are so few harvesters caught that it takes this long. Of course, it could just have been a fluke, and maybe other people's MXs are successful more quickly.

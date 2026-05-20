@@ -5,6 +5,8 @@ slug: "hakanoa-dry-ginger-beer"
 tags:
   - "drink"
   - "review"
+pingback_id: "622"
+pingback_count: 1
 ---
 *(Post theme: [Rain by Dragon](https://music.apple.com/nz/album/rain/1442499776?i=1442499787&l=en-GB))*
 

@@ -16,6 +16,8 @@ tags:
   - "teaching"
 comment_id: "156"
 comment_count: 5
+pingback_id: "156"
+pingback_count: 1
 ---
 [I earlier tried various editors I was considering using to teach IronPython](http://tonyandrewmeyer.wordpress.com/2009/07/12/choosing-an-ironpython-editor-for-teaching/).  One of the glaring omissions was Eclipse/PyDev, which has built-in support and is a very well-known IDE (particularly in the [Java](http://java.com) community).  The main reason that I skipped Eclipse was that when I was searching for an IDE to use professionally about five years ago I tried Eclipse (for [Python](http://python.org), C, and C++ development) and I really hated it - the IDE was very slow (especially to launch), it was very Java-centric, and just didn't suit me at all.  I'd briefly tried Eclipse before that as well, with similar results.
 Over the last few days, I decided that I was probably being unfair, and since this was a choice for my students rather than for me personally, I really ought to try Eclipse (with the PyDev extensions).  I also noticed recently a post about using IronPython with NetBeans - I'd heard of NetBeans before, but only in a Java development context, and since I stay as far away from Java development as I can, I had no experience with NetBeans at all.

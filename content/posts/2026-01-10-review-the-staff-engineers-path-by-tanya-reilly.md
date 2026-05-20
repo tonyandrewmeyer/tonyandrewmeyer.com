@@ -2,6 +2,8 @@
 title: "Review: The Staff Engineer’s Path by Tanya Reilly"
 date: 2026-01-10T16:25:52+12:00
 slug: "review-the-staff-engineers-path-by-tanya-reilly"
+pingback_id: "607"
+pingback_count: 1
 ---
 *(Post theme: [something to my something (feat. Maddy Low) by FDaSavage](https://music.apple.com/nz/album/something-to-my-something-feat-maddy-low/1867696063?i=1867696068&l=en-GB))*
 

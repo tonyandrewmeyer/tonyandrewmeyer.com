@@ -5,6 +5,8 @@ slug: "karma-drinks-apple-juice"
 tags:
   - "drink"
   - "review"
+pingback_id: "616"
+pingback_count: 1
 ---
 *(Post theme: [Karma by Taylor Swift](https://music.apple.com/nz/album/karma/1649434004?i=1649434498&l=en-GB))*
 

@@ -5,6 +5,8 @@ slug: "aroha-sparkling-feijoa"
 tags:
   - "drink"
   - "review"
+pingback_id: "621"
+pingback_count: 1
 ---
 *(Post theme: [Oh My by Gin Wigmore](https://music.apple.com/nz/album/oh-my/1442370077?i=1442370282&l=en-GB))*
 

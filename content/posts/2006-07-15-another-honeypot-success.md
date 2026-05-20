@@ -4,6 +4,8 @@ date: 2006-07-15T19:21:03+12:00
 slug: "another-honeypot-success"
 categories:
   - "Work"
+pingback_id: "51"
+pingback_count: 1
 ---
 Back [on February 1st, I received notification](http://tonyandrewmeyer.wordpress.com/2006/02/01/honeypot-success/) that a MX entry that I donated to [Project Honeypot](http://projecthoneypot.org/) helped identify a previously unknown email harvester. Last Thursday, I received notification of [another success](http://www.projecthoneypot.org/i_831db40a94fedf95b6b89b2eec1bbaa7).
 

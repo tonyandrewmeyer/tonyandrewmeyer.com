@@ -2,6 +2,8 @@
 title: "PodShow Plus: Three strikes - they're out."
 date: 2006-07-22T19:22:28+12:00
 slug: "podshow-plus-three-strikes-theyre-out"
+pingback_id: "53"
+pingback_count: 1
 ---
 [PodShow Plus](http://www.podshow.com) sounded interesting, and I listen to quite a few PodShow podcasts (probably 90% of the podcasts I listen to come from [PodShow](http://www.podshow.com), [Farpoint Media](http://www.farpointmedia.net/), or the [TWiT network](http://twit.tv)), so a few days after the opening, I created a (listener) account ([tonyandrewmeyer](http://tonyandrewmeyer.podshow.com/)), and created a channel with a dozen or so of the shows I listen to (mostly the PodShow and TWiT ones). I'm not really sold on the idea of channelling all my shows through a single feed (I can't check for new episodes of an individual podcast without a web browser, and it's a single point of failure), but thought I'd see what all the fuss was about.
 All seemed well at first. However, after a day or two, suspiciously few podcasts were coming through the channel feed. I checked, and, sure enough, the real feeds had episodes that the channel did not (strike one). (This bug has been mentioned on the [DSC](http://dailysourcecode.com/) and is apparently fixed now).

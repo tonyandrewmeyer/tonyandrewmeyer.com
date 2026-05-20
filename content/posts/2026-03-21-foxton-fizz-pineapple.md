@@ -5,6 +5,8 @@ slug: "foxton-fizz-pineapple"
 tags:
   - "drink"
   - "review"
+pingback_id: "615"
+pingback_count: 1
 ---
 *(Post theme: [Soda Pop from K-Pop Demon Hunters](https://music.apple.com/nz/album/soda-pop/1820264137?i=1820264147&l=en-GB))*
 

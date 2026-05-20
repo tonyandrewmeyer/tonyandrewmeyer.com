@@ -14,6 +14,8 @@ tags:
   - "wikipedia"
 comment_id: "76"
 comment_count: 2
+pingback_id: "76"
+pingback_count: 1
 ---
 Dad asked me today who my teachers were at [Pukepoto Primary School](http://www.pukepoto.school.nz/), which I could partially answer, with help (I think: Mrs Travers in J1 and J2, Mr Jones in Standard 1, Mrs Bellingham in Standard 2, and Mr Wilkins in Standard 3 and 4, and apparently someone else as a new-entrant).
 This is an example of knowledge that Google simply can't give you, of course.  Except now it can - or at least will be able to when this page is indexed.  When I remember, I'll try [this query](http://www.google.com/search?hl=en&q=%22Tony+Meyer%22+primary+school+teachers&btnG=Google+Search) again (161 hits at the moment, none of them with the required information, although in eight of the pages the "Tony Meyer" is me) and see if it works.

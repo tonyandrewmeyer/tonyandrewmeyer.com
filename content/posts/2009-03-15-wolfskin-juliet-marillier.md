@@ -9,6 +9,8 @@ tags:
   - "nz"
   - "review"
   - "wolfksin"
+pingback_id: "129"
+pingback_count: 1
 ---
 The main reason that I bought *Wolfskin* was because I noticed that [Marillier](http://www.julietmarillier.com/) was a New Zealander (or at least was born here, although she lives in Australia now), and there's not really very many NZ sci-fi/fantasy authors or books, and I'd like to support the locals as much as possible.  (As an aside, my favourite NZ book is *Beak of the Moon*, by Philip Temple, also of Dunedin).
 So I wasn't really expecting that much - it wasn't quite charity, but I would have been happy with a pretty mediocre story.  However, I really loved this book.  I'm not sure why so many fantasy authors feel the need to set their stories in/around the UK, but it's so common that it didn't really bother me here.
