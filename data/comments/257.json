@@ -1,0 +1,10 @@
+[
+ {
+  "id": 1176,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2011-01-18T17:47:53+12:00",
+  "parent": 0,
+  "content": "I had to make a few changes to get this to work in Google calendar as well as iCal. The revised version is:\n\n```\n#! /usr/bin/env python\n\nimport sqlite3\nimport datetime\n\nimport icalendar\n\ncal = icalendar.Calendar()\ncal.add(\"prodid\", \"-//Project Name Trac//trac.example.com//\")\ncal.add(\"version\", \"2.0\")\ncal.add(\"method\", \"PUBLISH\")\ncal.add(\"x-wr-calname\", \"Project Name Ticket Due Dates\")\ncal.add(\"x-wr-caldesc\", \"Due dates for Project Name tickets\")\ndb = sqlite3.connect(\"/project_path/db/trac.db\")\nc = db.cursor()\nc.execute(\"select t.id, t.owner, t.summary, c.value from ticket t, \"\n          \"ticket_custom c where t.id=c.ticket and t.status!='closed'\")\nfor ticket_id, owner, summary, due_date in c.fetchall():\n    if not due_date:\n        continue\n    due_date = datetime.datetime.strptime(due_date, '%d/%m/%Y')\n    due_date = datetime.date(due_date.year, due_date.month, due_date.day)\n    event = icalendar.Event()\n    event.add(\"summary\", \"Project Name #%s (%s): %s\" % (ticket_id, owner, summary))\n    event.add(\"dtstart;value=date\", due_date.strftime(\"%Y%m%d\"))\n    event.add(\"dtstamp\", datetime.datetime.now())\n    event.add(\"url\", \"https://trac.example.com/ticket/%s\" % ticket_id)\n    event[\"sequence\"] = (datetime.date.today() -\n                         datetime.date(2011, 1, 14)).days\n    event[\"uid\"] = \"ticket_due_%s@trac.example.com\" % ticket_id\n    event[\"transp\"] = \"TRANSPARENT\"\n    cal.add_component(event)\nc.close()\ndb.close()\nopen(\"/var/www/site/project-name-due.ics\", \"wb\").write(cal.as_string())\n```"
+ }
+]

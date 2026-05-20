@@ -1,0 +1,10 @@
+[
+ {
+  "id": 1245,
+  "author": "Jonathan Hosmer",
+  "author_url": "http://ipython.hozbox.com",
+  "date": "2012-01-06T02:31:15+12:00",
+  "parent": 0,
+  "content": "I've recently created a python interpreter for the iOS that supports almost all std libraries. It's called iPython and you can check it out here: http://itunes.apple.com/us/app/ipython/id485729872?ls=1&mt=8"
+ }
+]

@@ -1,0 +1,98 @@
+[
+ {
+  "id": 15,
+  "author": "Mike U",
+  "author_url": "",
+  "date": "2006-02-09T19:56:54+12:00",
+  "parent": 0,
+  "content": "Interesting.\nI had a similar issue with Failed recording a few weeks back. They replaced my decoder, but to me it seems obvious that it is software defects.\nre: Lost, Invasion.\nI had a similar issue. A friend who got MySKY installed was told by the installer that TVNZ does not provides correct Series Link information.\nI had these ste to Series Link, but it appears to try to record 2 of the same programs at once when you do this on TVNZ. I was also watching another channel and ended up with having to resolve a channel conflict real time. If I had been out, it woul dnot have recorded."
+ },
+ {
+  "id": 16,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-02-09T21:14:51+12:00",
+  "parent": 0,
+  "content": "Have you had problems with the new decoder? It seems pretty obvious to me that these are the result of software defects, too. The only way I can see that it could be hardware is if the hard disk has a bad sector, which is extremely rare.\nIf the problem really is with bad series link information from TVNZ, then Sky needs to either resolve that or not advertise that it works with those channels (in fact, advertise that it doesn't). I don't watch almost anything on Sky channels (I have Sky for the electronic guide and the clear signal, and the odd Sky1 program).\nI don't see how this could be the case (for my problems), though. You can clearly see the series link system working on the planner - it shows what's scheduled to be recorded, and when it's trying to find the next episode (those \"searching...\" entries). It wouldn't look for the duplicate one until the first one had already started. I had the TV on during most of my problems, too, and didn't get the conflict screen."
+ },
+ {
+  "id": 17,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-02-09T21:18:15+12:00",
+  "parent": 0,
+  "content": "I should also say that I have had a few TV2 (and maybe TV3? I don't recall) problems that fail to find any \"series link\" information (although the button is there, not like one-off programs). This doesn't bother me all that much, though, especially with networks that Sky doesn't own."
+ },
+ {
+  "id": 18,
+  "author": "Mike U",
+  "author_url": "",
+  "date": "2006-02-10T19:58:57+12:00",
+  "parent": 0,
+  "content": "I only every get the persistant Searching... issue on TVNZ. Haver not had it on TV3, which suggests my friend is most likely correct.\nI have had no failures with the new decoder so far.\nI note that said that it occasionally pops back to channel 0. It does this everythime it downloads a new set of software. Mine is at 7.104.14. I have faily sure it has gone up 3 or 4 revisions in the last couple of weeks.\nPersonally I have given up talking to Sky, the technicians are more skilled in installations rather than understanding the software, and the phone help desk people are just the 1st line support and don;t have the knowledge to discuss issues with.\nI understand that they do all their software customisation and some defect fixing in NZ. (I imagine Pace still supply some upgrades to them)."
+ },
+ {
+  "id": 19,
+  "author": "Aaron",
+  "author_url": "",
+  "date": "2006-02-15T17:06:49+12:00",
+  "parent": 0,
+  "content": "I've had MySky for 2 weeks and I'm already waiting for a tech to supply another decoder. I started having hard drive issues after a week (noises, intermittent resets, corrupted programmes) until finally, a few days ago, the hard drive totally died. At least the decoder has stopped resetting itself, but now I can't record anything.\nI think Sky definately have some bugs to iron out. And if they tell you no-one else has had problems, you can tell them they're full of s**t."
+ },
+ {
+  "id": 21,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-02-24T18:00:15+12:00",
+  "parent": 0,
+  "content": "These are familiar problems to me, unfortunately! I got mine installed on feb 14.\nLast week, I recorded Joey, Lost and Invasion. All went well. I noticed that there was sometimes overlap, although the 3 programs are all on TV2. A minute or two of Joey was repeated in the Joey recording and the Lost recording. That's fine I suppose, unless you happen to heve something else recording at the time on another channel.\nThis week, though, all 3 were shown as ..searching, and all 3 failed to record at all! No mention of failure, or why, and there are no ..searching entries at all any more. One News, which was also on series link and successful for over a week, also failed on the same night. So that is 4 programs lost in one night. Fortunately, I set my old DVR (Panasonic hard drive recorder) to record the free-to-air channels, in case MySky fails. Good thing I did!\nI have multiple email threads outstanding with Sky - none have reached any resolution whatsoever."
+ },
+ {
+  "id": 22,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-02-24T18:05:11+12:00",
+  "parent": 0,
+  "content": "Also, I follow NASCAR racing, which is on Sky Sport. In all 3 live events so far, the end of the program has been chopped off when the race went over the scheduled time. In the third instance (the Daytona 500), I even recorded the soccer match that was on immediately afterwards, hoping to catch the end that way.\nStill didn't work! When the race went about 45 minutes over the scheduled time, they changed the start time of the soccer, but not the end time of the race! So I still lost 45 minutes of the race - the finish!\nI believe they have someone watching these programs, and manually change the schedule when they see it is going into overtime. A huge concern to anyone recording live events!\nFor this weekend's race, I will use manual scheduling, and specify a couple hours extra. Hopefully that will work."
+ },
+ {
+  "id": 28,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-02-25T18:39:37+12:00",
+  "parent": 0,
+  "content": "Sky have gone quiet regarding my emails, too, which I will have to chase up again soon. I did get a statement that they would refund the installation fee and return me to regular Sky Digital if the problems couldn't be resolved. (What I want is for it to just work, but there's little point using it if I have to record everything twice just in case the MySky recording fails).\nChanging the start of the soccer and not the end of the race is apalling - much worse than just leaving it alone. I suppose there might be technical issues here, in that the length isn't known until the recording has already started, but it should be possible to work around those.\nHas anyone heard of anyone with MySky that **hasn't** had problems? haven't, and I'm wondering if such a person exists."
+ },
+ {
+  "id": 29,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-02-25T18:40:46+12:00",
+  "parent": 0,
+  "content": "BTW, I mentioned in the post that *Bones* only recorded 45 minutes. That's the one failure that's consistent - it happens every week, whereas the other failures are hard to fit into a pattern."
+ },
+ {
+  "id": 33,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-02-28T16:29:51+12:00",
+  "parent": 0,
+  "content": "So far, every single program I have recorded on TV1 has been truncated, either at the beginning or the end. I have had MySky for two weeks today.\nI had One News on series link. The recording always started about one minute into the program, ie after the intro previews. I have overlaps set to 2 minutes before and 10 minutes after.\nI recorded the Expose on hurricane Katrina last week. The end of it was lost (didn't make it to the credits).\nI recorded Human Potential last night -8:30 to 9:30. 61 minutes was recorded, with again the end being chopped off.\nAlso last night I recorded a whole bunch of programs on the History Channel, Discovery and National Geographic. They included 10:30 to 11:30, 11:30 to 12:30, 12:30 to 1:30, and 1:30 to 2:30, They all recorded 72 minutes, as you would expect. Even when two are on the same channel (eg the 10:30 to 11:30 and 11:30 to 12:30), they were both 72 minutes, with the start of the next program being duplicated onto the end of the previous program.\nI also recorded Desperate Housewives, which did 72 minutes.\nI am beginning to think it is a TV1 problem."
+ },
+ {
+  "id": 1064,
+  "author": "Erika",
+  "author_url": "",
+  "date": "2008-06-17T14:39:25+12:00",
+  "parent": 0,
+  "content": "Gees you have reported a lot of issues with MySky! That's nice they refunded some money. Are you on their beta program now? After using TiVo in the US, I don't think I'll be forking over my $ to Rupert Murdoch for MySky anytime soon."
+ },
+ {
+  "id": 1217,
+  "author": "Helen",
+  "author_url": "",
+  "date": "2011-11-14T17:29:18+12:00",
+  "parent": 0,
+  "content": "The technician connected the My Sky to the HDMI2 output on the TV (the old sky was to AV1)....every time we switch off the TV, when we switch it back on, SKY comes up, with sound but no picture! We have to press the red re-set button EVERY time and sometimes SEVERAL times before we get a picture back....most annoying when we have a programme recording as it stops that too! Does anybody else have this problem?"
+ }
+]

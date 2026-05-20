@@ -1,0 +1,18 @@
+[
+ {
+  "id": 215,
+  "author": "Matthew Buchanan",
+  "author_url": "http://www.cactuslab.com",
+  "date": "2007-02-18T14:51:43+12:00",
+  "parent": 0,
+  "content": "Doesn't seem to have fixed it for me, the URL of your page once it's finished loading is <http://blog.tangomu.com/2007/02/17/redirect-weirdness/>."
+ },
+ {
+  "id": 216,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2007-02-21T18:42:39+12:00",
+  "parent": 0,
+  "content": "No, it didn't fix it for me, either. I tried removing the redirect and readding it, and that didn't work. I planned to email Wordpress, but ran out of time, but then the next day it appeared to be fine.\nI guess it was a Wordpress issue and they figured it out on their own."
+ }
+]

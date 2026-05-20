@@ -1,0 +1,26 @@
+[
+ {
+  "id": 23,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-02-24T18:09:10+12:00",
+  "parent": 0,
+  "content": "I had One News on series link. It always started recording at 6:01 - partway through the \"news to come\" previews. I tried the automatic overhangs, 2 minutes before and 10 minutes after, and 5 minutes before. Still it always started recording at 6:01.\nMaybe this had something to do with 3rd Rock being recorded also at 6pm, don't know. The 3rd Rock repeat showing at 7am does not have series link, so I have to use the 6pm showing."
+ },
+ {
+  "id": 40,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-03-02T12:16:44+12:00",
+  "parent": 0,
+  "content": "I switched off automatic to 10 before and 10 after and have got better results than with automatic, although not great. That does suck up a lot of space, though, so I've just switched to 2 minutes before and 5 after, which seems to be working ok.\nClearly \"automatic\" is not the same as 2 minutes before and 2 after, despite what the documentation says."
+ },
+ {
+  "id": 42,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-03-03T02:55:15+12:00",
+  "parent": 0,
+  "content": "I wonder if \"automatic\" pays attention to changes in end time, and the others do not? The term automatic does imply something other than just 2 and 2."
+ }
+]

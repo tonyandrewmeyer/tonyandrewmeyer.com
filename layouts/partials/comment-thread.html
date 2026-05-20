@@ -1,0 +1,26 @@
+{{ $parent := .parent }}
+{{ $all := .comments }}
+{{ $depth := .depth }}
+<ul class="comment-list depth-{{ $depth }}">
+  {{ range where $all "parent" $parent }}
+    {{ $cid := .id }}
+    <li class="comment" id="comment-{{ $cid }}">
+      <div class="comment-meta">
+        {{ if .author_url }}
+          <a class="comment-author" href="{{ .author_url }}" rel="nofollow noopener">{{ .author | default "Anonymous" }}</a>
+        {{ else }}
+          <span class="comment-author">{{ .author | default "Anonymous" }}</span>
+        {{ end }}
+        {{ with .date }}
+          <time class="comment-date" datetime="{{ . }}">{{ (time.AsTime .).Format "2 January 2006" }}</time>
+        {{ end }}
+      </div>
+      <div class="comment-body">
+        {{ .content | markdownify }}
+      </div>
+      {{ with where $all "parent" $cid }}
+        {{ partial "comment-thread.html" (dict "comments" $all "parent" $cid "depth" (add $depth 1)) }}
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

@@ -1,0 +1,26 @@
+[
+ {
+  "id": 1121,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2009-07-26T14:30:57+12:00",
+  "parent": 0,
+  "content": "Michael Foord brought up the help() in 2.6 issue on the IronPython mailing list, and also [fixed this in the CPython stdlib](http://bugs.python.org/issue6581). If I'm reading the response correctly, that means that this will be fixed by 2.6 final, which is a very good thing IMO."
+ },
+ {
+  "id": 1154,
+  "author": "lm",
+  "author_url": "",
+  "date": "2010-03-18T21:46:00+12:00",
+  "parent": 0,
+  "content": "Tony I'm interested on your experience but I'm affraid links are broken and I get a message \"\nThis file is no longer available.\""
+ },
+ {
+  "id": 1155,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2010-03-31T21:49:13+12:00",
+  "parent": 0,
+  "content": "Hmm. They weren't meant to expire. I'll try and fix that up shortly (and put up the ones that are missing)."
+ }
+]

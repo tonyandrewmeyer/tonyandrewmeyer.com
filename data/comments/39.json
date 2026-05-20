@@ -1,0 +1,18 @@
+[
+ {
+  "id": 45,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-03-03T21:03:26+12:00",
+  "parent": 0,
+  "content": "Clearly, MySky IS a mature product AS DESIGNED. You must admit, the features are pretty slick and well integrated, although some improvements could be made eg in the info shown on the planner page. AS IMPLEMENTED, however, it is not a mature product, as its bugginess attests. Presumably the UK and Aussie versions could be mature products, and the NZ integration with EPG, TAB, etc have introduced the flakiness.\nInteresting his take on the series link feature - sounds like he needs to do a soft reboot!"
+ },
+ {
+  "id": 49,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-03-04T10:47:34+12:00",
+  "parent": 0,
+  "content": "I don't agree that it's mature as designed. If you look at the features, it's like the PVRs that came out in 1999. It's 2006 - if you look at the features that a truly mature PVR has today (e.g. TiVO, or the other PVRs in the US) you can clearly see the difference.\nI have seen comments that people have had problems with series link with the UK version, although not ones with recording programs (although I haven't looked extensively).\nA good development methodology would avoid introducing problems with changes, in any case. If Sky's team (outsourced, from the sounds of the email you forwarded) aren't using such a methodology, then Sky should use someone that does."
+ }
+]

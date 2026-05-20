@@ -1,0 +1,74 @@
+[
+ {
+  "id": 1104,
+  "author": "Davy Mitchell",
+  "author_url": "http://daftpython.blogspot.com",
+  "date": "2009-07-13T00:06:03+12:00",
+  "parent": 0,
+  "content": "Thanks for including DIE in your list and I appreciate the feedback. Hoping to add Autoindent to the next release which is due out in a week or two with a bit of luck!"
+ },
+ {
+  "id": 1105,
+  "author": "Michael Foord",
+  "author_url": "http://www.ironpythoninaction.com/",
+  "date": "2009-07-13T05:40:30+12:00",
+  "parent": 0,
+  "content": "Good post. :-)"
+ },
+ {
+  "id": 1109,
+  "author": "Mike Huffman",
+  "author_url": "",
+  "date": "2009-07-18T05:11:33+12:00",
+  "parent": 0,
+  "content": "See if this helps setting up Notepad++ to run (Iron)Python:\n[Notepad++ as Python IDE](https://sourceforge.net/forum/message.php?msg_id=5194092)"
+ },
+ {
+  "id": 1110,
+  "author": "David Lawler",
+  "author_url": "",
+  "date": "2009-07-18T23:34:08+12:00",
+  "parent": 0,
+  "content": "Hi there,\nIf you download a recent 'daily build' of Sharpdevelop from http://build.sharpdevelop.net/buildartefacts it DOES include a graphical form editor! AFAIK it is the only 'product' out there with this feature! Matt Ward has done great work on this!\nEnjoy,\nDavid"
+ },
+ {
+  "id": 1111,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2009-07-19T12:01:36+12:00",
+  "parent": 0,
+  "content": "Hi David,\nI didn't try a daily build of SharpDevelop - it may well not have the problems that I experience with 3.1b1. However, for my purposes (teaching), I just can't recommend that first-year students use a daily build as their editor/IDE for the semester."
+ },
+ {
+  "id": 1112,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2009-07-19T17:19:53+12:00",
+  "parent": 0,
+  "content": "Hi Mike,\nThanks for the tip. I'll pass that along to the students that choose to keep using Notepad++."
+ },
+ {
+  "id": 1117,
+  "author": "David Lawler",
+  "author_url": "",
+  "date": "2009-07-20T08:04:03+12:00",
+  "parent": 0,
+  "content": "I can understand your reservations about using a daily build (though the daily build is a very well behaved MSI install and the code quality seems to be pretty high)! However, SharpDevelop is the only IDE for IronPython that gives you a Form Editor of any kind and the ability to set break points and debug your code! It has been a while since the last release of 3.0 (back in February) so I would be surprised if there is not a new release of 3.1 soon. People who do want to try it should look at the first two links on this page by Matt Ward: http://community.sharpdevelop.net/blogs/\nThese talk about how the debugging works and the Form editor. The daily build has a large number of improvements to the form editor. I would encourage you to overcome your 'clone of Visual Studio' prejudice because it does have features such as Boo and IronPython support, code conversion to/from various languages, mixed language projects, as well as built in SVN support that goes beyond what Visual Studio does (at least the free Express versions). By the way I have no affiliation with the SharpDevelop people.\nRegards,\nDavid"
+ },
+ {
+  "id": 1120,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2009-07-23T11:47:55+12:00",
+  "parent": 0,
+  "content": "Hi David - SharpDevelop isn't the only IronPython IDE that gives you a form editor - the \"Experimental Hive\" / SDK version of Visual Studio does as well.\nIf this was for my personal development use, then the \"clone of Visual Studio\" issue wouldn't be as relevant. However, an important aspect of the course is that the students are prepared for both later courses and real development work. They're still pretty unlikely to use IronPython professionally, but getting familiar with .NET and Visual Studio is a very useful skill. IMO, getting the students familiar with an IDE that they won't be using (probably won't be able to use) professionally is not nearly as valuable as getting familiar with Visual Studio.\nI'd also argue that Visual Studio is (by far) the best IDE available for Windows (assuming it supports the language you want to use). It's free for the students (part of the deal that Microsoft makes with educational institutions / governments), so it is hard to find something that is a better choice.\nI'm sure that features like Boo support, code conversion, mixed-language projects, and SVN support are relevant for some people. However, none of these are of any use in this course - in fact adding extra features is really a negative, since they just confuse the students. (This is why DIE is such an appealing choice - because of it's targeted simplicity)."
+ },
+ {
+  "id": 1138,
+  "author": "Tony Meyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2009-08-17T22:17:33+12:00",
+  "parent": 0,
+  "content": "Opps. I missed that the \"Experimental Hive\" install in the Visual Studio SDK is still IronPython 1.1 (just like IronPython Studio), even in the VS 2008 SDK. This is quite unfortunate, although it still does work, and having it integrated into the Professional version of Visual Studio that the students already have is still a benefit."
+ }
+]

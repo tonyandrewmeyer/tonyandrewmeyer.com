@@ -1,0 +1,42 @@
+[
+ {
+  "id": 1108,
+  "author": "Fabio Zadrozny",
+  "author_url": "",
+  "date": "2009-07-17T22:02:48+12:00",
+  "parent": 0,
+  "content": "Hi Tony,\nUnfortunately, the problem with Iron Python in pydev is that it needs Iron Python 2.6 (version 2.0 won't work as you saw -- and I agree that a better error message should be there, 1.4.7 was the first release with that integration, and some things will already be improved for the next pydev version -- the spaces in paths, which was a bug in earlier versions of Pydev shouldn't really matter anymore, so, that message has to be removed).\nThere are more details at pydev.blogspot.com/2009/06/testing-on-pydev-147-ironpython.html on why IronPython 2.6 is needed and how to have code-completion for .NET libraries.\nBest Regards,\nFabio"
+ },
+ {
+  "id": 1113,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2009-07-19T17:28:36+12:00",
+  "parent": 0,
+  "content": "An added complication with NetBeans that I didn't notice while testing previously is that it does *not* work with IronPython 2.6b1, because 2.6b1 is missing the \"code\" and \"codeop\" modules (although it does seem that simply copying them into the Lib folder works). I've tried to find out why these have vanished, but haven't been able to do far.\nThat means that NetBeans means using 2.0.1, like Eclipse/PyDev requires using 2.6."
+ },
+ {
+  "id": 1114,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2009-07-19T21:35:56+12:00",
+  "parent": 0,
+  "content": "Hi Fabio - thanks for the tip (I wish it had been in the release notes on the download page - would have saved me much trial and error!).\nI tried Eclipse/PyDev with 2.6b1, and it does seem to work well (including the \"auto config\", which is nice).\nI think Eclipse/PyDev and NetBeans fall into pretty similar categories (good support, very full-featured, fairly simple setup, but require Java to be installed first, and only work with a particular version)."
+ },
+ {
+  "id": 1115,
+  "author": "Fabio Zadrozny",
+  "author_url": "",
+  "date": "2009-07-19T22:51:47+12:00",
+  "parent": 0,
+  "content": "I'm in the process of updating the homepage... but anyways, as it's a limitation (because pydev relies on sys._getframe()), it should be much more explicit about that."
+ },
+ {
+  "id": 1119,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2009-07-23T11:39:32+12:00",
+  "parent": 0,
+  "content": "The NetBeans issue (unable to import code/codeop) has been fixed in 2.6b2, so it appears to work fine in 2.0.2 and 2.6b2 now."
+ }
+]

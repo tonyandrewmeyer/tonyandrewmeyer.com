@@ -1,0 +1,34 @@
+[
+ {
+  "id": 24,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-02-24T18:12:28+12:00",
+  "parent": 0,
+  "content": "The series link feature depends on a human at Sky identifying episodes of a series and identifying them as such. So the potential for future errors is high, until they can automate it.\nAs an example, 3rd Rock at 6pm mon-fri has series link available. 3rd Rock at 7am tue-sat (also on Sky 1) does not have it available.\nYet the Desperate Housewives series link includes the repeat showing on saturday!"
+ },
+ {
+  "id": 30,
+  "author": "TonyAndrewMeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com",
+  "date": "2006-02-26T18:43:30+12:00",
+  "parent": 0,
+  "content": "Do you have an authorative source for this? I believe that a human might be identifying which programs are part of a series, but I would be astonished if someone has to manually identify each episode. It seems much more likely that it looks for programs of the same name on the same channel.\nThat doesn't explain 3rd Rock, but perhaps it's a different heuristic or there's more to it.\n(They were putting this together for at least four years! Surely they've managed to get past doing everything manually...)"
+ },
+ {
+  "id": 34,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-02-28T16:35:51+12:00",
+  "parent": 0,
+  "content": "It is definitely NOT just looking for program name on the same channel. The series link for Desperate Housewives picks up the saturday rebroadcast, but Invasion does not! (Or is it the other way around?) I wonder what happens for The Simpsons on Sky 1. There are about 2 dozen episodes per week.\nSee my comment elsewhere on this site, including an email from Sky. It does shed some light."
+ },
+ {
+  "id": 39,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-03-02T12:15:25+12:00",
+  "parent": 0,
+  "content": "Thanks for the email in comments on another post about the series link feature.\nI am apalled that they are doing this manually. Any competent software engineer could create a system that would automatically fill in series fields (series name/id, season number, episode number) given the name of the program and the episode title (which are definitely there, since they are displayed in the guide).\nI did a new post about this, but the problem with repeats is that they are not including enough information. It's not enough to just have an id for the series, they need to identify each episode (ideally the season as well). If they did that, then they could make the choice whether to record repeats or not, and ensure that duplicates aren't ever recorded.\nI set The Simpsons to record as a test a while back, and it did record all the episodes (I quickly took it off as it sucks through almost all the space in a week)."
+ }
+]

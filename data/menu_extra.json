@@ -1,0 +1,27 @@
+[
+ {
+  "name": "Samuel's Music",
+  "url": "https://linktr.ee/fdasavage",
+  "weight": 1
+ },
+ {
+  "name": "Linked List",
+  "url": "https://tonyandrewmeyer.blog",
+  "weight": 2
+ },
+ {
+  "name": "Letterboxd",
+  "url": "https://letterboxd.com/tonyandrewmeyer/",
+  "weight": 3
+ },
+ {
+  "name": "Mastodon",
+  "url": "https://cloudisland.nz/@tonyandrewmeyer",
+  "weight": 4
+ },
+ {
+  "name": "Family",
+  "url": "https://badtomatoes.org/",
+  "weight": 5
+ }
+]

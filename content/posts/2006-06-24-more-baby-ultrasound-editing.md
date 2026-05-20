@@ -1,0 +1,10 @@
+---
+title: "More Baby Ultrasound Editing"
+date: 2006-06-24T13:23:15+12:00
+slug: "more-baby-ultrasound-editing"
+---
+A couple of scans ago, I wrote up my [process for converting the VCDs](http://tonyandrewmeyer.wordpress.com/2006/02/18/extracting-video-from-baby-ultrasound-scans/) we get from our ultrasounds into something that I can use in iMovie. We had our final scan today, and I finally got around to improving the process. I'm not sure that I'll need this again, but in case I do, here it is:
+I used [IsoBuster](http://www.smart-projects.net/isobuster/) to convert the VCD data into an MPEG-2 (ignoring invalid data).I then used [Ultra MPEG Converter](http://www.google.com/url?sa=t&ct=res&cd=1&url=http%3A//www.topshareware.com/Ultra-MPEG-Converter-download-19045.htm&ei=l_73Q_PaMYqOowKstqzmDQ&sig2=Iks0b6_tXCRFENWte8TL7g) to convert the extracted MPEG-2 to MPEG-1 (no resize, ensuring that the height and width are set as in the original (which is not the default)).
+Quicktime is able to work with this file, and it's not overly large, but the scans have a border that I don't really want (textual information that isn't relevant, and isn't legible at low resolutions). iMovie doesn't have the ability (as far as I know) to crop an image, so I needed to do this with something else. I found an Open Source tool, [VirtualDub](http://www.virtualdub.org/), that handled this. I simply opened the file, turned off the audio track (since it didn't contain anything anyway), trimmed off the end of the file (I could have done that in iMovie, but doing it now saves processing that part), and did the crop.
+To do the crop, I applied a "null transform" filter (a filter is necessary to crop, but I didn't actually want to apply a filter) and then cropped appropriately. I saved the file as an AVI compressed with the Cinepak codec.
+technorati tags: [svcd](http://technorati.com/tag/svcd), [isobuster](http://technorati.com/tag/isobuster), [video](http://technorati.com/tag/video), [mac](http://technorati.com/tag/mac), [baby](http://technorati.com/tag/baby)

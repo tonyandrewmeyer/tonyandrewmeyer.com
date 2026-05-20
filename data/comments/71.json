@@ -1,0 +1,34 @@
+[
+ {
+  "id": 285,
+  "author": "Debbie",
+  "author_url": "http://www.quickfix.co.nz",
+  "date": "2007-04-26T14:42:35+12:00",
+  "parent": 0,
+  "content": "Heh, I noticed this about a year ago and tried emailing/sending a comment to Google about it, but obviously it went unnoticed. I'm glad it's not just me who notices these things :)"
+ },
+ {
+  "id": 303,
+  "author": "Tony Meyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com",
+  "date": "2007-05-01T17:35:21+12:00",
+  "parent": 0,
+  "content": "I was missing something :) I noticed kcal on a packet of food today, so I actually [looked it up](http://en.wikipedia.org/wiki/Calorie). Turns out there are \"small\" and \"large\" calories, and really what lay-people call calories are kilo-calories, so Google is really right.\nSeems to me they should have a \"did you mean kilocalories?\" addition to the searches, since this is the common use..."
+ },
+ {
+  "id": 1209,
+  "author": "Savvy",
+  "author_url": "",
+  "date": "2011-09-20T12:28:25+12:00",
+  "parent": 0,
+  "content": "That's very likely wrong. I was using it to check some homework, and it came up with this:\ndiameter of the earth = 1 275 620 000 centimeters\nIt's wrong! They added an extra zero, I checked my calculations many times."
+ },
+ {
+  "id": 1249,
+  "author": "steve",
+  "author_url": "",
+  "date": "2012-04-04T19:59:27+12:00",
+  "parent": 0,
+  "content": "If you do sin(45) or cos(22) it gets them all wrong. It is rubbish."
+ }
+]

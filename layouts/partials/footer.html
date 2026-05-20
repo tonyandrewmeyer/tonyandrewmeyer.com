@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="wrap">
+    {{ with .Site.Data.menu_extra }}
+      <nav class="links-out">
+        <span class="links-out-label">Elsewhere:</span>
+        {{ range . }}
+          <a href="{{ .url }}" rel="me noopener">{{ .name }}</a>
+        {{ end }}
+      </nav>
+    {{ end }}
+    <p class="colophon">
+      &copy; {{ now.Year }} {{ .Site.Title }}.
+      <a href="{{ "/index.xml" | relURL }}">RSS</a>.
+    </p>
+  </div>
+</footer>

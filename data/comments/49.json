@@ -1,0 +1,34 @@
+[
+ {
+  "id": 190,
+  "author": "Carl",
+  "author_url": "",
+  "date": "2006-08-13T20:38:36+12:00",
+  "parent": 0,
+  "content": "I was just about to write this myself; thanks!\nI didn't see anything exposed in the COM interface to determine when the podcast updates are done, so I've created a script to quit iTunes as well (same as yours except \"iTunes.Quit()\" as the last line of main(). I've set up Windows Scheduler to run the update script at 4 am, then the quit script at 5 am. There may be a cleaner way to do this; this is my first experience with the iTunes COM interface.\nAnyway, thanks again, saved me some trouble!"
+ },
+ {
+  "id": 191,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-08-13T21:48:17+12:00",
+  "parent": 0,
+  "content": "No worries - glad it was some use!\nI have iTunes running pretty much all the time on the machine that does the podcast retrieval, so didn't need the Quit() myself. Really, it ought to check if iTunes is running to start with, and then Quit() if it wasn't, but I've wanted to do similar for other things in the past and haven't managed to figure out how to do that (via COM).\nI'm not sure if it's possible to figure out if the update is done or not (Apple does publish information about the COM interface, or PythonWin will let you browse it in a very raw way). Waiting for a suitable amount of time ought to work well enough, though."
+ },
+ {
+  "id": 192,
+  "author": "Carl",
+  "author_url": "",
+  "date": "2006-08-14T19:01:22+12:00",
+  "parent": 0,
+  "content": "Regarding determining if iTunes is running, here is one way to do it:\n-------\n#! /usr/bin/env python\n\"\"\"Quit iTunes if running.\"\"\"\nimport win32com\nimport pythoncom\nimport win32com.client\nimort win32gui\ndef main():\ntry:\n# this will throw an exception if the window is not found:\nwin32gui.FindWindow(\"iTunes\", \"iTunes\")\npythoncom.CoInitialize()\napp = \"iTunes.Application\"\niTunes = win32com.client.Dispatch(app)\niTunes.UpdatePodcastFeeds()\niTunes.Quit()\nexcept:\npass\nif __name__ == \"__main__\":\nmain()\n-------\nI've modified my script to do this and it appears to work. Not really a general-purpose solution, but it works for iTunes. I used CowSpy to get the window classname.\nI didn't see anything in the docs about explicitly getting notified when podcast updates are done. Perhaps there is and I didn't see it, or maybe there is a roundabout way to determine it. But in my case I can't imagine the update process ever taking more than about 5 minutes, as I don't subscribe to that many podcasts and the script will be run every night. So I'm pretty happy with what I have. :-)"
+ },
+ {
+  "id": 193,
+  "author": "Carl",
+  "author_url": "",
+  "date": "2006-08-14T19:07:28+12:00",
+  "parent": 0,
+  "content": "Ack, looks like my formatting didn't carry over; maybe this will work. If not, sorry for the double post!\n`#! /usr/bin/env python\n\"\"\"Quit iTunes if running.\"\"\"\nimport win32com\nimport pythoncom\nimport win32com.client\nimort win32gui\ndef main():\ntry:\n# this will throw an exception if the window is not found:\nwin32gui.FindWindow(\"iTunes\", \"iTunes\")\npythoncom.CoInitialize()\napp = \"iTunes.Application\"\niTunes = win32com.client.Dispatch(app)\niTunes.UpdatePodcastFeeds()\niTunes.Quit()\nexcept:\npass\nif __name__ == \"__main__\":\nmain()`"
+ }
+]

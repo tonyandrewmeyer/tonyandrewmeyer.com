@@ -1,0 +1,34 @@
+[
+ {
+  "id": 46,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-03-03T21:14:52+12:00",
+  "parent": 0,
+  "content": "Tony, I can understand your frustrations, but being rude and abusive to their frontline staff is not likely to be helpful. Now if you could find the responsible manager...\nDo you have a test scenario where program truncation is 100% reproducible? Something like 45 mins instead of 67? I have noticed a bunch of oddities, but the only reliable one was losing the first minute of One News - hardly a showstopper."
+ },
+ {
+  "id": 47,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-03-04T10:37:12+12:00",
+  "parent": 0,
+  "content": "Sadly, that isn't true (for the record, I have worked as a frontline customer support person, as a supervisor of those people, and as a manager employing those people).\nGenerally, my system (which works fairly well) is that I start polite, friendly and fairly informal. When that fails, I move to polite and formal. When that fails (this is the stage I am at with SkyTV) I move to less polite and clearly aggrevated. Sadly, this is the stage where things seem to occur most readily - I expect this is because vocal complaints are dealt with more promptly to get them out of the way.\nWhen that fails, I write a formal complaint to management. This almost always gets a decent response, but is time consuming and means I have to go to the effort of printing something out, finding an envelope and stamp, and posting it. It would be nice if I didn't have to go that far with SkyTV over this.\nBTW, I was not rude or abusive. I offered suggestions about how they could improve their processes, since they are clearly not good enough, pointed out where they lied (completely unacceptable), and told them that it needed to be fixed.\nI suppose you could consider the suggestions rude, but if they took them on board and implemented them, then things would improve. Constructive criticsm should not be considered rude, IMO. I can't see anywhere I was \"abusive\"."
+ },
+ {
+  "id": 48,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-03-04T10:44:10+12:00",
+  "parent": 0,
+  "content": "Yes, I do have one 100% reproducable failure. Almost all the failures are like yours and seemingly at random (have you had any of the \"FAILED\" recordings, or ones that record 0 mnutes, or are they just too short?).\nBones, on TV3 Wednesdays at 9:30, always records the final 45 minutes, missing the first 15 and has a status of \"Part Rec: Clashed\". However, nothing clashes with it (I record CSI:NY before it, which can't clash, since it finishes before it, and doesn't have the missing 15 minutes, and Invasion on TV2 at 9:25pm. Two recordings are meant to be possible).\nI suppose that SkyTV would call this a problem with series link on the free-to-air channels. However, the programs that have a \"FAILED\" status, or the ones that record for 0 minutes, with no error message don't seem to be related to series link. Unfortunately, those are the ones that aren't easily reproduced."
+ },
+ {
+  "id": 50,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-03-04T19:21:20+12:00",
+  "parent": 0,
+  "content": "I have not seen a FAILED one that I can recall, or 0 minutes.\nSky told me there is a series link problem with free to air channels, but I have seen no evidence of that. The problem associated with series link where they come up ..searching is not on free-to-air channels, it is only on TV1, TV2 and the Sky Sport channels.\nInteresting that your scenario includes TV2 and another channel on Wednesday night. The one I had that had severe truncation and a \"recording conflict\" was also on Wednesday night. I was recording Lost and Invasion back-to-back, and South Park on C4 at 9:30. My best theory to date is that sometimes back-to-back recordings overlap, and that gets confused with the overlap times specified. In your case and mine, we can clearly see that it should be ok - I'm just trying to guess where the programming error is."
+ }
+]

@@ -1,0 +1,8 @@
+{{ $list := index .Site.Data.comments .Params.comment_id }}
+{{ with $list }}
+  <section class="comments" id="comments">
+    <h2>{{ len . }} Comment{{ if ne (len .) 1 }}s{{ end }}</h2>
+    <p class="comments-note">Comments are preserved from the original site and are closed.</p>
+    {{ partial "comment-thread.html" (dict "comments" . "parent" 0 "depth" 0) }}
+  </section>
+{{ end }}

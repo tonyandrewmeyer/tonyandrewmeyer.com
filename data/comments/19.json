@@ -1,0 +1,58 @@
+[
+ {
+  "id": 6,
+  "author": "Phil",
+  "author_url": "",
+  "date": "2006-01-26T21:20:07+12:00",
+  "parent": 0,
+  "content": "Thanks for the blog. Keep going as I am unsure whether I am going to buy or not and I don't know anyone with it to play with.\nThe main reason I want to get it is for the series link, so I would want this working properly. For example the Formula 1 which is on at random times and random sundays."
+ },
+ {
+  "id": 10,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-01-31T21:48:21+12:00",
+  "parent": 0,
+  "content": "Sorry about the delay - have been flat out over the last week, so just drafting things without posting them properly (but have caught up now).\nIt seems that the series link feature is better than it first appeared. I'm still a little concerned about **why** the problem occured that first time (as in my new entry). If further problems occur, or I figure anything else out, I'll certainly post about it.\nThe fact that it managed to find a weekly program that skipped a week is certainly promising. It would be interesting to see how well it worked with more random programs. I suspect it would probably be ok as long as the name was the same (e.g. All Blacks games probably wouldn't be because they have the opposition in the title; I suppose I'd watch these live anyway though).\nIf I can find something on at the moment that has this semi-random schedule, I'll see what happens (there's plenty of space left for such experimenting)."
+ },
+ {
+  "id": 12,
+  "author": "Phil",
+  "author_url": "",
+  "date": "2006-02-02T09:33:56+12:00",
+  "parent": 0,
+  "content": "Hmmm, do you know how Sky links the programmes in a series together. I would hope that they use some sort of metatag that is hidden in the schedule. If they just use the title I fear things like ABs games or the Formula 1 (as you suggest) which probably haqve different titles won't be picked up.\nA related question, if you click on recording a series, can you look forward in the guide and see all the times it thinks it is going to record and if so how much in to the future does the guide go.\nThanks again for the blog. Very useful and informative, especially considering there is no where to see and play with one before you plonk down $600"
+ },
+ {
+  "id": 13,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-02-02T10:28:23+12:00",
+  "parent": 0,
+  "content": "No, I don't know, unfortunately. As you say, ideally the program database would have a \"Series Name\" (just the same as the program in many cases, e.g. \"Lost\", but simplified for others, like \"All Blacks Game\"). If it were really good, it would have additional tags (where relevant), like \"Season Number\" and \"Episode Number\". I believe this is how TiVo and others manage to record just one season, and resolve conflicts by recording the same episode when a repeat is played later or on another channel. (Sky 1 actually does plenty of repeat programming, as do the movie channels (which I don't have), so this would be a useful feature).\nMy suspicion and fear is also that they are simply using the title+channel (in the past, I've seen programs in the guide where the episode title made it's way into the program title, so that had better stop if this is the case).\nSo far I haven't been able to find anything to set for recording that would properly test this (the Sevens are one TV 1 this weekend, but the title seems to be the same each time). Hopefully I'll see something soon.\nSadly, no, the series link only shows the next show to be recorded, not anything else. The guide shows up to 7 days ahead, but even if there's more than one show in that time (e.g. a daily show), you only get the next one displayed. It looks like what it does is just search for the next one after the current one is finished recording."
+ },
+ {
+  "id": 36,
+  "author": "Greg",
+  "author_url": "",
+  "date": "2006-03-01T15:48:41+12:00",
+  "parent": 0,
+  "content": "Tony,You are not alone. I have rung sky three times now and complained about the series link - each time I got a wonderfully crafted technical explanation that made no sense and actually was easily challenged. On two occasions they actually admitted what they where saying sounded like BS and perhaps it was not the problem.\nSeries link does not work on TV one, Two or Sky sport. Other channels are hit and miss. TV 3 does seem to work (3 news, nightline both work fine).\nThis is a fundamental part of the product and sky need to get it sorted fast before the end up on fair go or at the CC for false advertising. At least the should come clean publicly so people don’t get frustrated missing their favourite shows."
+ },
+ {
+  "id": 41,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-03-02T12:20:40+12:00",
+  "parent": 0,
+  "content": "I've given up on phone calls for just about any technical problem with any company. Typically the people staffing the phones are completely ignorant about technical issues and often make up their answers. Since you get a different person each time, you also end up repeating yourself endlessly.\nI agree they need to come clean. They need to say when this will be fixed, and really should offer to compensate existing customers for not providing what we paid for."
+ },
+ {
+  "id": 43,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-03-03T03:08:07+12:00",
+  "parent": 0,
+  "content": "Greg, series link DOES work on TV1 and TV2, although every program I have recorded on TV1 has been truncated (see my comments on http://www.geekzone.co.nz/forums.asp?ForumId=34).\nIf it does not work for you, you need to reboot (GoBack+Select on front panel). Do not touch the ..searching lines. If you do delete one for any reason (like to stop recording a series), reboot again. Sounds like early versions of Windows, doesn't it? :)\nWhen you first choose series link, it may come up with a ..searching line and a proper line. Don't delete either - just let them be.\nI powered mine off once, and it really got confused - really lost its mind. Rebooting as above fixed it. It doesn't hurt to reboot often. Any time I am unsure about anything, I reboot. Shouldn't have to, I know, but I just want it to WORK!"
+ }
+]

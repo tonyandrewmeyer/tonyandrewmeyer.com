@@ -1,0 +1,39 @@
+baseURL = "https://tonyandrewmeyer.com/"
+languageCode = "en-nz"
+title = "Tony Andrew Meyer"
+timeZone = "Pacific/Auckland"
+paginate = 15
+enableEmoji = true
+
+# Reproduce the WordPress permalink scheme so old links keep working.
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Main navigation: internal sections.
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 1
+[[menu.main]]
+  name = "Archive"
+  url = "/archive/"
+  weight = 2
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 3
+
+[params]
+  description = "Personal blog of Tony Andrew Meyer."
+  # External links (migrated from the WordPress nav menu) render in the footer.
+  # See data/menu_extra.json.
+
+[markup.goldmark.renderer]
+  unsafe = true  # allow inline HTML retained from old posts
+
+[services.rss]
+  limit = 20

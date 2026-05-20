@@ -1,0 +1,18 @@
+[
+ {
+  "id": 116,
+  "author": "John Gee",
+  "author_url": "",
+  "date": "2006-04-01T13:24:17+12:00",
+  "parent": 0,
+  "content": "My MySky was recording when the outage occurred. During the outage the unit was displaying the atmospheric error instead of a signal, but was still responsive. I was able to list my pre-recorded programs.\nHowever, each pre-recorded program behaved the same when I tried to view. It started playing for a few seconds, and then an error message came up saying that MySky can not be used without a signal. So the error was quite explicit, although unexpected and annoying!"
+ },
+ {
+  "id": 181,
+  "author": "Chris",
+  "author_url": "",
+  "date": "2006-04-06T20:45:58+12:00",
+  "parent": 0,
+  "content": "I have a friend who has mysky - he had the same problem, could not watch the recorded shows.\nIt must be a 'feature' that was put in by sky, maybe to allow them to 'apply' DRM even after something has been recorded? Or it could just be to make sure you have a valid subscription to view recorded stuff."
+ }
+]

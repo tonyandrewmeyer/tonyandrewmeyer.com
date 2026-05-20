@@ -1,0 +1,34 @@
+[
+ {
+  "id": 25,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-02-24T18:15:11+12:00",
+  "parent": 0,
+  "content": "Apparently the ..searching thing only happens on TVNZ and Sky Sport, due to two versions of the channel being broadcast for TAB, or regional versions."
+ },
+ {
+  "id": 26,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-02-25T18:26:17+12:00",
+  "parent": 0,
+  "content": "I've heard that this is only TVNZ (hadn't heard Sky Sport) also. It's more annoying than a problem - but it's also something that should be extremely simple to fix.\nSky told me that there are two identical entries, and that it finds one, and then can't find the other. Even if they can't fix the data (because it comes from another network), filtering out duplicates is something that any programmer should be capable of."
+ },
+ {
+  "id": 32,
+  "author": "John Porter",
+  "author_url": "",
+  "date": "2006-02-28T16:18:02+12:00",
+  "parent": 0,
+  "content": "Here is the guts of an email sent to a friend of mine:\nThank you for your email.\nSeries Link works quite simply. In the XSI (metadata) information transmitted to the EPG there is a single field for âseries IDâ which links together programmes in a series. There is also a âlink flagâ field: if this is set then the green button will be displayed by the planner to enable a series link to be requested. The difficult part for us is in attaching series IDs to programmes and in separating out repeat showings. SKY is linking programmes on SKY-originated channels as quickly as possible. On channels sourced from outside SKY we are at the mercy of the data provided to us.\nThere are two issues which the customer seems to have run into:\n1) We have had a problem that the decoder will record the first programme in a series then fail to book recordings for any other future programmes in any series. This can be fixed by rebooting the decoder and does not seem to recur. (At present if you reboot while you have a PPV movie recorded in the planner you will lose the movie so avoid rebooting in this situation).\n2) We have another problem on TV1, TV2 and SKY Sports 1,2 and 3 that the decoder will display âsearchingâ? on future bookings. This is due to duplication of services within our transmission. SKY Sports services have been duplicated to create one service for legacy decoders (with SKY bet) and another for MY SKY (without SKY bet which has a bug). We hope to upload a new software version very soon which will enable us to use SKY bet on the PVR and so eliminate the Sports services duplication and the âsearchingâ? error. The same error message occurs on TV1 and TV2 because of the multiple copies transmitted for regionalization. In this case the PVR is supposed to cope with the duplication but does not â we are looking for a solution with the software provider.\nI hope this will help with your query.\nIf you have any further queries please do not hesitate to contact me, or alternatively you can speak to one of our Customer Service Representatives on 0800 759 759.\nKind regards\nNaia Tuimaseve\nCustomer Relations Team\nPh: 0800 759 888\nwww.skytv.co.nz"
+ },
+ {
+  "id": 37,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2006-03-02T11:52:56+12:00",
+  "parent": 0,
+  "content": "Great - thanks heaps for passing that on!"
+ }
+]

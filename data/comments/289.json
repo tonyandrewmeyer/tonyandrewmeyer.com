@@ -1,0 +1,50 @@
+[
+ {
+  "id": 1192,
+  "author": "Jack",
+  "author_url": "",
+  "date": "2011-03-24T05:03:57+12:00",
+  "parent": 0,
+  "content": "I recently saw something similar with my account. Accessed by amazonaws.com:184.72.232.169\nDid you ever get any more details? What services do you allow access to your gmail account? Do you know if this is gmail only?"
+ },
+ {
+  "id": 1193,
+  "author": "tonyandrewmeyer",
+  "author_url": "http://tonyandrewmeyer.wordpress.com/",
+  "date": "2011-03-29T20:20:08+12:00",
+  "parent": 0,
+  "content": "Nothing else has come up - certainly nothing suspicious. It's very odd behaviour if it was malicious, since any information taken would date quickly. (Unless there was a search for something - perhaps US specific - and it wasn't found so nothing more was done).\nI still lean towards a legit service that got flagged because it did something differently.\nI've had the gmail account for many years, so it's possible I'm forgetting something, but the only service I can think of that I've given access is backupify.\nI think this was gmail only - although if you had the username + password that would give access to any google service (but I saw nothing in any others, and use many)."
+ },
+ {
+  "id": 1221,
+  "author": "Steve Carroll",
+  "author_url": "http://stevecarroll.com",
+  "date": "2011-11-18T04:29:55+12:00",
+  "parent": 0,
+  "content": "I recently signed up for backupify (after reviewing and believing it to be safe). But two days later, the emails they sent me are gone from my gmail account and they say they don't have an account for me. I find it hard to believe and seems way to nefarious, but it would seem that someone has deleted my backupify account (erased it altogether) and used the information I provided to access my email and delete the correspondence they sent to me. This is either a system glitch on their end - and I says that because I can't think of a reason why it would be done on purpose, or some scary stuff is going on. Very scary."
+ },
+ {
+  "id": 1246,
+  "author": "John Haug",
+  "author_url": "",
+  "date": "2012-01-26T17:34:31+12:00",
+  "parent": 0,
+  "content": "I got the unusual activity notice tonight when I accessed my Gmail account. After the panic subsided I recalled that I used QuickOffice on my Amazon Kindle Fire to access a spreadsheet from my Google Docs account early this morning. The time stamp seemed about right. Mystery solved. I hope this helps others seeing this message."
+ },
+ {
+  "id": 1252,
+  "author": "Rima",
+  "author_url": "",
+  "date": "2012-08-02T03:47:08+12:00",
+  "parent": 0,
+  "content": "I saw something similar it's :\nIP Address: 184.73.159.134 (amazonaws.com)\nLocation: Charlotte, NC, USA\nWho is this?????"
+ },
+ {
+  "id": 1256,
+  "author": "YGhaz",
+  "author_url": "",
+  "date": "2013-03-10T09:09:12+12:00",
+  "parent": 0,
+  "content": "Same as John Haug - Using OpenOffice & the Kindle App on an iPad got me the message from Google showing IP address of amazonaws in Dallas, TX."
+ }
+]
