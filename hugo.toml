@@ -2,8 +2,10 @@ baseURL = "https://tonyandrewmeyer.com/"
 languageCode = "en-nz"
 title = "Tony Andrew Meyer"
 timeZone = "Pacific/Auckland"
-paginate = 15
 enableEmoji = true
+
+[pagination]
+  pagerSize = 15
 
 # Reproduce the WordPress permalink scheme so old links keep working.
 [permalinks]
