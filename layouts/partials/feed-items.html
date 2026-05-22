@@ -1,0 +1,33 @@
+{{- /* Fetch an RSS 2.0 feed at build time and return a slice of items.
+       Args: url (string), count (int, optional). Each returned item is a dict
+       with title, link and img (img may be empty). Any fetch or parse failure
+       logs a warning and returns whatever was gathered so the build never breaks. */ -}}
+{{- $url := .url -}}
+{{- $count := .count | default 4 -}}
+{{- $out := slice -}}
+{{- $ua := "Mozilla/5.0 (compatible; tonyandrewmeyer.com site build; +https://tonyandrewmeyer.com)" -}}
+{{- $fetched := try (resources.GetRemote $url (dict "headers" (dict "User-Agent" $ua))) -}}
+{{- with $fetched.Err -}}
+  {{- warnf "elsewhere: could not fetch %q: %s" $url . -}}
+{{- else -}}
+  {{- with $fetched.Value -}}
+    {{- $parsed := try (transform.Unmarshal .) -}}
+    {{- with $parsed.Err -}}
+      {{- warnf "elsewhere: could not parse %q: %s" $url . -}}
+    {{- else -}}
+      {{- $data := $parsed.Value -}}
+      {{- $channel := $data -}}
+      {{- if reflect.IsMap $data -}}{{- with $data.channel -}}{{- $channel = . -}}{{- end -}}{{- end -}}
+      {{- $items := $channel.item -}}
+      {{- if and $items (not (reflect.IsSlice $items)) -}}{{- $items = slice $items -}}{{- end -}}
+      {{- range first $count $items -}}
+        {{- $desc := printf "%v" (.description | default "") -}}
+        {{- $img := "" -}}
+        {{- with (findRESubmatch `src=["']([^"']+)["']` $desc 1) -}}{{- $img = index (index . 0) 1 -}}{{- end -}}
+        {{- if not $img -}}{{- with (findRESubmatch `src=&(?:quot|#34);([^&]+)&(?:quot|#34);` $desc 1) -}}{{- $img = index (index . 0) 1 -}}{{- end -}}{{- end -}}
+        {{- $out = $out | append (dict "title" (printf "%v" (.title | default "")) "link" (printf "%v" (.link | default "")) "img" $img) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

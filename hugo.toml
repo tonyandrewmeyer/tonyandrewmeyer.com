@@ -34,6 +34,19 @@ enableEmoji = true
   # External links (migrated from the WordPress nav menu) render in the footer.
   # See data/menu_extra.json.
 
+# Sidebar "Elsewhere" blocks. Each service's feed is fetched at build time and a
+# block only renders when its identifier below is set. The feed hosts are not
+# reachable from the sandbox, so these populate on the GitHub Actions deploy.
+[params.elsewhere]
+  count = 4
+  [params.elsewhere.goodreads]
+    user_id = ""  # numeric id from goodreads.com/user/show/<id>-name
+    shelf = "read"
+  [params.elsewhere.flickr]
+    nsid = ""  # Flickr NSID, e.g. 12345678@N00
+  [params.elsewhere.letterboxd]
+    user = "tonyandrewmeyer"
+
 [markup.goldmark.renderer]
   unsafe = true  # allow inline HTML retained from old posts
 
