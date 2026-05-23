@@ -1,0 +1,6 @@
+{{- /* Inline replacement for a link to a file that's no longer hosted.
+       Renders as a clickable element that opens the site-wide "file not
+       available" dialog (see baseof.html). */ -}}
+{{- $label := .Get 0 -}}
+<button type="button" class="deadlink" aria-haspopup="dialog">{{ $label }}</button>
+{{- "" -}}

@@ -12,5 +12,28 @@
     {{ partial "elsewhere.html" . }}
   </div>
   {{ partial "footer.html" . }}
+  <dialog id="deadlink-dialog" class="deadlink-dialog" aria-labelledby="deadlink-title">
+    <h2 id="deadlink-title">File no longer hosted</h2>
+    <p>The files originally linked from these old course pages were on Dropbox's
+       since-discontinued public file hosting and aren't available any more.
+       If you'd like a copy, get in touch via
+       <a href="https://cloudisland.nz/@tonyandrewmeyer" rel="me noopener">Mastodon</a>.</p>
+    <form method="dialog"><button type="submit" class="deadlink-close">Close</button></form>
+  </dialog>
+  <script>
+    (function () {
+      var dialog = document.getElementById('deadlink-dialog');
+      if (!dialog || typeof dialog.showModal !== 'function') return;
+      document.addEventListener('click', function (e) {
+        var trigger = e.target.closest('.deadlink');
+        if (!trigger) {
+          if (e.target === dialog) dialog.close();
+          return;
+        }
+        e.preventDefault();
+        dialog.showModal();
+      });
+    })();
+  </script>
 </body>
 </html>
