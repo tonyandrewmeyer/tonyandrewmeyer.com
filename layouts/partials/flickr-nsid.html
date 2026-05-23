@@ -1,0 +1,25 @@
+{{- /* Resolve a Flickr user's NSID (e.g. 12345678@N00) from their photostream
+       page, given a path alias like "littlechicken". The photos_public RSS
+       feed only accepts an NSID, but Flickr embeds the NSID in several stable
+       places on the photostream page; try them in order. Returns "" on
+       failure so the caller can skip the photos block. */ -}}
+{{- $user := .user -}}
+{{- $nsid := "" -}}
+{{- $ua := "Mozilla/5.0 (compatible; tonyandrewmeyer.com site build; +https://tonyandrewmeyer.com)" -}}
+{{- $url := printf "https://www.flickr.com/photos/%s/" $user -}}
+{{- $fetched := try (resources.GetRemote $url (dict "headers" (dict "User-Agent" $ua))) -}}
+{{- with $fetched.Err -}}
+  {{- warnf "elsewhere: flickr nsid lookup failed for %q: %s" $user . -}}
+{{- else -}}
+  {{- with $fetched.Value -}}
+    {{- $html := .Content -}}
+    {{- $patterns := slice `photos_public\.gne\?id=([0-9]+@N[0-9]+)` `"nsid"\s*:\s*"([0-9]+@N[0-9]+)"` `flickr\.com/photos/([0-9]+@N[0-9]+)` -}}
+    {{- range $patterns -}}
+      {{- if not $nsid -}}
+        {{- with (findRESubmatch . $html 1) -}}{{- $nsid = index (index . 0) 1 -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $nsid -}}{{- warnf "elsewhere: could not find NSID for flickr user %q" $user -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $nsid -}}

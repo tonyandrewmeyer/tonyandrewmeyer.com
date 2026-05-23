@@ -19,7 +19,11 @@
     {{- end -}}
   {{- end -}}
   {{- with .flickr -}}
-    {{- with .nsid -}}
+    {{- $nsid := .nsid -}}
+    {{- if and (not $nsid) .user -}}
+      {{- $nsid = partial "flickr-nsid.html" (dict "user" .user) -}}
+    {{- end -}}
+    {{- with $nsid -}}
       {{- $photos = partial "feed-items.html" (dict "url" (printf "https://api.flickr.com/services/feeds/photos_public.gne?id=%s&format=rss2" .) "count" $count) -}}
     {{- end -}}
   {{- end -}}
