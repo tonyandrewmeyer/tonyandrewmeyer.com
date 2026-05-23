@@ -1,0 +1,64 @@
+{{- /* Sidebar showing latest activity from external services, fetched at build
+       time. Each block only renders when its account is configured in
+       [params.elsewhere] and the feed returns items. */ -}}
+{{- $cfg := .Site.Params.elsewhere -}}
+{{- $count := (and $cfg $cfg.count) | default 4 -}}
+{{- $reads := slice -}}
+{{- $films := slice -}}
+{{- $photos := slice -}}
+{{- with $cfg -}}
+  {{- with .goodreads -}}
+    {{- with .user_id -}}
+      {{- $shelf := $cfg.goodreads.shelf | default "read" -}}
+      {{- $reads = partial "feed-items.html" (dict "url" (printf "https://www.goodreads.com/review/list_rss/%s?shelf=%s" . $shelf) "count" $count) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with .letterboxd -}}
+    {{- with .user -}}
+      {{- $films = partial "feed-items.html" (dict "url" (printf "https://letterboxd.com/%s/rss/" .) "count" $count) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with .flickr -}}
+    {{- $nsid := .nsid -}}
+    {{- if and (not $nsid) .user -}}
+      {{- $nsid = partial "flickr-nsid.html" (dict "user" .user) -}}
+    {{- end -}}
+    {{- with $nsid -}}
+      {{- $photos = partial "feed-items.html" (dict "url" (printf "https://api.flickr.com/services/feeds/photos_public.gne?id=%s&format=rss2" .) "count" $count) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if or $reads $films $photos -}}
+<aside class="sidebar">
+  {{- with $reads }}
+  <section class="elsewhere-block">
+    <h2 class="elsewhere-title">Reading</h2>
+    <ul class="elsewhere-list">
+      {{- range . }}
+      <li><a href="{{ .link }}" rel="noopener">{{ with .img }}<img class="elsewhere-thumb" src="{{ . }}" alt="" loading="lazy">{{ end }}<span>{{ .title }}</span></a></li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- with $films }}
+  <section class="elsewhere-block">
+    <h2 class="elsewhere-title">Watching</h2>
+    <ul class="elsewhere-list">
+      {{- range . }}
+      <li><a href="{{ .link }}" rel="noopener">{{ with .img }}<img class="elsewhere-thumb" src="{{ . }}" alt="" loading="lazy">{{ end }}<span>{{ .title }}</span></a></li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- with $photos }}
+  <section class="elsewhere-block">
+    <h2 class="elsewhere-title">Photos</h2>
+    <ul class="elsewhere-photos">
+      {{- range . }}
+      <li><a href="{{ .link }}" rel="noopener" title="{{ .title }}">{{ if .img }}<img src="{{ .img }}" alt="{{ .title }}" loading="lazy">{{ else }}<span>{{ .title }}</span>{{ end }}</a></li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+</aside>
+{{- end -}}

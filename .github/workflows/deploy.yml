@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Rebuild daily so the "Elsewhere" sidebar (Goodreads/Flickr/Letterboxd feeds,
+  # fetched at build time) stays current. Cron is UTC.
+  schedule:
+    - cron: "0 16 * * *"
 
 permissions:
   contents: read
