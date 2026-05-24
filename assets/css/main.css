@@ -84,12 +84,8 @@ body:has(.sidebar) .layout { grid-template-columns: minmax(0, 1fr) 14rem; }
 .pingback { padding: .3rem 0; font-size: .92rem; }
 .pingback-date { color: var(--muted); font-size: .8rem; margin-left: .5rem; }
 
-.home-hero { max-width: var(--wide); margin: 1.4rem auto 0; padding: 0 1.1rem; }
-.home-hero img { width: 100%; height: auto; border-radius: 6px; display: block; }
-@media (max-width: 36rem) {
-  .home-hero { padding: 0; }
-  .home-hero img { border-radius: 0; }
-}
+.home-hero { margin: 0; padding: 0; }
+.home-hero img { width: 100%; height: auto; display: block; }
 
 .deadlink {
   background: none;
