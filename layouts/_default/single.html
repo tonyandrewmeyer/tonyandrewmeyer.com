@@ -13,8 +13,8 @@
 
   {{ if or .Params.categories .Params.tags }}
     <footer class="post-taxonomies">
-      {{ with .Params.categories }}<p class="post-cats">Categories: {{ range . }}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
-      {{ with .Params.tags }}<p class="post-tags">Tags: {{ range . }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
+      {{ with .Params.categories }}<p class="post-cats">Categories: {{ range . }}<a href="{{ "categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
+      {{ with .Params.tags }}<p class="post-tags">Tags: {{ range . }}<a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
     </footer>
   {{ end }}
 

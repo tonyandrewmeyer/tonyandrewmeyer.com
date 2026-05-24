@@ -1,6 +1,6 @@
 {{ define "hero" }}
 <section class="home-hero" aria-hidden="true">
-  <img src="{{ "/images/hero.jpg" | relURL }}" alt="" width="1500" height="606" fetchpriority="high">
+  <img src="{{ "images/hero.jpg" | relURL }}" alt="" width="1500" height="606" fetchpriority="high">
 </section>
 {{ end }}
 
@@ -21,8 +21,8 @@
       </div>
       {{ if or .Params.categories .Params.tags }}
         <footer class="post-taxonomies">
-          {{ with .Params.categories }}<p class="post-cats">Categories: {{ range . }}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
-          {{ with .Params.tags }}<p class="post-tags">Tags: {{ range . }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
+          {{ with .Params.categories }}<p class="post-cats">Categories: {{ range . }}<a href="{{ "categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
+          {{ with .Params.tags }}<p class="post-tags">Tags: {{ range . }}<a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
         </footer>
       {{ end }}
     </article>
@@ -36,6 +36,6 @@
       </li>
     {{ end }}
   </ul>
-  <p><a href="{{ "/archive/" | relURL }}">Full archive &rarr;</a></p>
+  <p><a href="{{ "archive/" | relURL }}">Full archive &rarr;</a></p>
 </div>
 {{ end }}
