@@ -8,6 +8,7 @@ tags:
 pingback_id: "616"
 pingback_count: 1
 drink:
+  photo: "/uploads/drinks/karma-drinks-apple-juice.png"
   producer: "Karma Drinks"
   product: "Apple Juice"
   type: "juice"

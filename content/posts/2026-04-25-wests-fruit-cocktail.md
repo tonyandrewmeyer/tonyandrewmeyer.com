@@ -6,6 +6,7 @@ tags:
   - "drink"
   - "review"
 drink:
+  photo: "/uploads/drinks/wests-fruit-cocktail.jpg"
   producer: "Wests"
   product: "Fruit Cocktail"
   type: "soft drink"

@@ -8,6 +8,7 @@ tags:
 pingback_id: "622"
 pingback_count: 1
 drink:
+  photo: "/uploads/drinks/hakanoa-dry-ginger-beer.jpg"
   producer: "Hakanoa"
   product: "Dry Ginger Beer"
   type: "ginger beer"

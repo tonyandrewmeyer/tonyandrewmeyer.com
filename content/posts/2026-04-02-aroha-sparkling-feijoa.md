@@ -8,6 +8,7 @@ tags:
 pingback_id: "621"
 pingback_count: 1
 drink:
+  photo: "/uploads/drinks/aroha-sparkling-feijoa.jpg"
   producer: "Aroha"
   product: "Sparkling Feijoa"
   type: "soft drink"
