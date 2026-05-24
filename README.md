@@ -25,9 +25,14 @@ Install Hugo **extended** (>= 0.148): https://gohugo.io/installation/
 | `static/uploads/` | media (18 image files migrated from WordPress) |
 | `static/images/hero.jpg` | home-page hero banner (replace with any image; layout in `layouts/index.html`) |
 | `layouts/shortcodes/deadlink.html` | inline placeholder for files no longer hosted |
+| `content/drinks.md` | the `/drinks/` tracker page (renders from post front matter) |
+| `layouts/_default/drinks.html` | tracker table layout (sortable, type-filterable) |
+| `static/uploads/drinks/` | product thumbnails for the drinks tracker |
 | `scripts/convert.py` | the WXR-to-Hugo converter, kept for reference |
 | `scripts/media_manifest.txt` | list of media URLs -> local paths |
 | `scripts/fetch_media.sh` | one-shot script that downloaded the media |
+| `scripts/drinks_manifest.txt` | slug -> producer product-page URL, for the image fetcher |
+| `scripts/fetch_drink_images.py` | downloads og:image for each drink and sets `drink.photo` |
 
 ## Dead file links
 
@@ -47,6 +52,40 @@ hugo new content posts/2026-05-21-my-title.md
 
 Edit the front matter (`title`, `date`, `slug`) and write markdown. New
 posts don't need a `comment_id`.
+
+## Logging a new drink
+
+Drink reviews are regular posts that opt in to the `/drinks/` tracker by
+adding a `drink:` block to their front matter:
+
+```yaml
+tags:
+  - "drink"
+  - "review"
+drink:
+  producer: "Hakanoa"
+  product: "Dry Ginger Beer"
+  type: "ginger beer"        # free-form; current set: juice, soft drink, ginger beer
+  packaging: "glass bottle"  # free-form
+  volume_ml: 330
+  rating: 8.3                # /10
+  url: "https://www.hakanoa-handmade.co.nz/products/wild-ferment-dry-ginger-beer"
+  availability:
+    - "online direct"
+```
+
+Add the new entry to `scripts/drinks_manifest.txt` (one line:
+`<post-slug><TAB><product-url>`) and then, from a network that can reach
+the producer site (the Claude web sandbox is Cloudflare-blocked):
+
+```sh
+python3 scripts/fetch_drink_images.py
+```
+
+That scrapes the page's `og:image`, drops it in
+`static/uploads/drinks/<slug>.<ext>`, and sets the post's `drink.photo`
+field. Re-runnable: existing files are skipped, but the `photo:` field is
+always rewritten so it stays in sync if a downloaded extension changes.
 
 ## Deployment (GitHub Pages + custom domain)
 
