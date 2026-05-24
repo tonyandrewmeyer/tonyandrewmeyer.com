@@ -22,24 +22,21 @@ Install Hugo **extended** (>= 0.148): https://gohugo.io/installation/
 | `data/pingbacks/*.json` | preserved pingbacks ("Linked from"), keyed by post id |
 | `data/menu_extra.json` | external "Elsewhere" links (footer) |
 | `layouts/` | the theme (hand-rolled, no external dependency) |
-| `static/uploads/` | media (see below) |
+| `static/uploads/` | media (18 image files migrated from WordPress) |
+| `layouts/shortcodes/deadlink.html` | inline placeholder for files no longer hosted |
 | `scripts/convert.py` | the WXR-to-Hugo converter, kept for reference |
 | `scripts/media_manifest.txt` | list of media URLs -> local paths |
-| `scripts/fetch_media.sh` | downloads the media into `static/uploads/` |
+| `scripts/fetch_media.sh` | one-shot script that downloaded the media |
 
-## Media — one step still needed
+## Dead file links
 
-The WordPress export does **not** include the image files, only links to
-them. Run this from a machine/network that can reach `tonyandrewmeyer.com`
-(while the WordPress site is still up):
-
-```sh
-bash scripts/fetch_media.sh
-git add static/uploads && git commit -m "Add migrated media"
-```
-
-There are 18 referenced files. After that the site is fully self-contained
-and you can let the WordPress.com hosting lapse.
+The 2009/2010 D520 course posts originally linked to PDFs and zips on
+Dropbox's since-discontinued public file hosting. Each link is now a
+`{{</* deadlink "label" */>}}` shortcode that renders an inline button;
+clicking opens a site-wide `<dialog>` (defined in
+`layouts/_default/baseof.html`) explaining the files aren't hosted any
+more and pointing readers at Mastodon to ask for a copy. Use the same
+shortcode for any future link to a file that's gone away.
 
 ## Writing a new post
 
