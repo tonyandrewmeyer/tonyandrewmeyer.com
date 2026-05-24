@@ -23,6 +23,7 @@ Install Hugo **extended** (>= 0.148): https://gohugo.io/installation/
 | `data/menu_extra.json` | external "Elsewhere" links (footer) |
 | `layouts/` | the theme (hand-rolled, no external dependency) |
 | `static/uploads/` | media (18 image files migrated from WordPress) |
+| `static/images/hero.jpg` | home-page hero banner (replace with any image; layout in `layouts/index.html`) |
 | `layouts/shortcodes/deadlink.html` | inline placeholder for files no longer hosted |
 | `scripts/convert.py` | the WXR-to-Hugo converter, kept for reference |
 | `scripts/media_manifest.txt` | list of media URLs -> local paths |

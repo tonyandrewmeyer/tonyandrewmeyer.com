@@ -1,3 +1,9 @@
+{{ define "hero" }}
+<section class="home-hero" aria-hidden="true">
+  <img src="{{ "/images/hero.jpg" | relURL }}" alt="" width="1500" height="606" fetchpriority="high">
+</section>
+{{ end }}
+
 {{ define "main" }}
 <div class="home">
   {{ with .Content }}<div class="home-intro">{{ . }}</div>{{ end }}

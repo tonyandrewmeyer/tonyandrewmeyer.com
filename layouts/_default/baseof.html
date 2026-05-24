@@ -5,6 +5,7 @@
 </head>
 <body>
   {{ partial "header.html" . }}
+  {{ block "hero" . }}{{ end }}
   <div class="layout">
     <main class="content">
       {{ block "main" . }}{{ end }}
