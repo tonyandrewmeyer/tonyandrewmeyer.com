@@ -36,6 +36,7 @@
   <table class="drinks-table" id="drinks-table">
     <thead>
       <tr>
+        <th scope="col" class="drinks-photo-col"><span class="visually-hidden">Photo</span></th>
         <th data-sort="text" scope="col">Drink</th>
         <th data-sort="text" scope="col">Type</th>
         <th data-sort="number" scope="col">Volume</th>
@@ -48,6 +49,11 @@
       {{ range $drinks }}
         {{ $d := .Params.drink }}
         <tr data-type="{{ $d.type }}">
+          <td class="drinks-photo-cell">
+            {{ with $d.photo }}
+              <a href="{{ $.RelPermalink }}"><img src="{{ . | relURL }}" alt="" loading="lazy" class="drink-thumb"></a>
+            {{ end }}
+          </td>
           <td><a href="{{ .RelPermalink }}">{{ $d.producer }} &mdash; {{ $d.product }}</a></td>
           <td>{{ $d.type }}</td>
           <td data-value="{{ $d.volume_ml }}">{{ $d.volume_ml }} ml</td>
@@ -66,16 +72,17 @@
     if (!table) return;
     var tbody = table.tBodies[0];
     var headers = table.querySelectorAll('th[data-sort]');
-    headers.forEach(function (th, idx) {
+    headers.forEach(function (th) {
       th.tabIndex = 0;
       th.setAttribute('role', 'button');
+      var col = th.cellIndex;
       var doSort = function () {
         var rows = Array.prototype.slice.call(tbody.rows);
         var kind = th.dataset.sort;
         var asc = th.dataset.dir !== 'asc';
         rows.sort(function (a, b) {
-          var av = a.cells[idx].dataset.value || a.cells[idx].textContent;
-          var bv = b.cells[idx].dataset.value || b.cells[idx].textContent;
+          var av = a.cells[col].dataset.value || a.cells[col].textContent;
+          var bv = b.cells[col].dataset.value || b.cells[col].textContent;
           if (kind === 'number') return (parseFloat(av) - parseFloat(bv)) * (asc ? 1 : -1);
           return av.localeCompare(bv) * (asc ? 1 : -1);
         });
