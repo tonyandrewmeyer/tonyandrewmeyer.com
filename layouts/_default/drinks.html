@@ -1,0 +1,102 @@
+{{ define "main" }}
+<div class="drinks">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="drinks-intro">{{ . }}</div>{{ end }}
+
+  {{ $drinks := where site.RegularPages "Params.drink" "ne" nil }}
+  {{ $drinks = $drinks.ByDate.Reverse }}
+  {{ $count := len $drinks }}
+  {{ $sum := 0.0 }}
+  {{ range $drinks }}{{ $sum = add $sum .Params.drink.rating }}{{ end }}
+  {{ $avg := 0.0 }}{{ if gt $count 0 }}{{ $avg = div $sum $count }}{{ end }}
+  {{ $byRating := $drinks.ByParam "drink.rating" }}
+  {{ $top := index ($byRating.Reverse) 0 }}
+
+  <dl class="drinks-stats">
+    <div><dt>Tried</dt><dd>{{ $count }}</dd></div>
+    <div><dt>Average</dt><dd>{{ printf "%.1f" $avg }}/10</dd></div>
+    {{ with $top }}
+      <div><dt>Top</dt><dd><a href="{{ .RelPermalink }}">{{ .Params.drink.producer }} {{ .Params.drink.product }}</a> ({{ .Params.drink.rating }})</dd></div>
+    {{ end }}
+  </dl>
+
+  <div class="drinks-filters">
+    <label>Type:
+      <select id="drink-type-filter">
+        <option value="">All</option>
+        {{ $types := slice }}
+        {{ range $drinks }}{{ $types = $types | append .Params.drink.type }}{{ end }}
+        {{ range (sort (uniq $types)) }}
+          <option value="{{ . }}">{{ . }}</option>
+        {{ end }}
+      </select>
+    </label>
+  </div>
+
+  <table class="drinks-table" id="drinks-table">
+    <thead>
+      <tr>
+        <th data-sort="text" scope="col">Drink</th>
+        <th data-sort="text" scope="col">Type</th>
+        <th data-sort="number" scope="col">Volume</th>
+        <th data-sort="text" scope="col">Packaging</th>
+        <th data-sort="number" scope="col" data-dir="desc">Rating</th>
+        <th data-sort="date" scope="col">Tried</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $drinks }}
+        {{ $d := .Params.drink }}
+        <tr data-type="{{ $d.type }}">
+          <td><a href="{{ .RelPermalink }}">{{ $d.producer }} &mdash; {{ $d.product }}</a></td>
+          <td>{{ $d.type }}</td>
+          <td data-value="{{ $d.volume_ml }}">{{ $d.volume_ml }} ml</td>
+          <td>{{ $d.packaging }}</td>
+          <td data-value="{{ $d.rating }}"><strong>{{ $d.rating }}</strong>/10</td>
+          <td data-value="{{ .Date.Format "2006-01-02" }}"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time></td>
+        </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  (function () {
+    var table = document.getElementById('drinks-table');
+    if (!table) return;
+    var tbody = table.tBodies[0];
+    var headers = table.querySelectorAll('th[data-sort]');
+    headers.forEach(function (th, idx) {
+      th.tabIndex = 0;
+      th.setAttribute('role', 'button');
+      var doSort = function () {
+        var rows = Array.prototype.slice.call(tbody.rows);
+        var kind = th.dataset.sort;
+        var asc = th.dataset.dir !== 'asc';
+        rows.sort(function (a, b) {
+          var av = a.cells[idx].dataset.value || a.cells[idx].textContent;
+          var bv = b.cells[idx].dataset.value || b.cells[idx].textContent;
+          if (kind === 'number') return (parseFloat(av) - parseFloat(bv)) * (asc ? 1 : -1);
+          return av.localeCompare(bv) * (asc ? 1 : -1);
+        });
+        headers.forEach(function (h) { h.removeAttribute('data-dir'); });
+        th.dataset.dir = asc ? 'asc' : 'desc';
+        rows.forEach(function (r) { tbody.appendChild(r); });
+      };
+      th.addEventListener('click', doSort);
+      th.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doSort(); }
+      });
+    });
+    var filter = document.getElementById('drink-type-filter');
+    if (filter) {
+      filter.addEventListener('change', function () {
+        var v = filter.value;
+        Array.prototype.slice.call(tbody.rows).forEach(function (r) {
+          r.hidden = v && r.dataset.type !== v;
+        });
+      });
+    }
+  })();
+</script>
+{{ end }}

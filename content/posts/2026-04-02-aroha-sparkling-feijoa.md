@@ -7,6 +7,16 @@ tags:
   - "review"
 pingback_id: "621"
 pingback_count: 1
+drink:
+  producer: "Aroha"
+  product: "Sparkling Feijoa"
+  type: "soft drink"
+  packaging: "glass bottle"
+  volume_ml: 330
+  rating: 10
+  url: "https://arohadrinks.co.nz/products/sparkling-feijoa"
+  availability:
+    - "online direct"
 ---
 *(Post theme: [Oh My by Gin Wigmore](https://music.apple.com/nz/album/oh-my/1442370077?i=1442370282&l=en-GB))*
 

@@ -7,6 +7,17 @@ tags:
   - "review"
 pingback_id: "616"
 pingback_count: 1
+drink:
+  producer: "Karma Drinks"
+  product: "Apple Juice"
+  type: "juice"
+  packaging: "glass bottle"
+  volume_ml: 300
+  rating: 6
+  url: "https://karmadrinks.co.nz/products/karma-apple-juice"
+  availability:
+    - "cafés"
+    - "online direct"
 ---
 *(Post theme: [Karma by Taylor Swift](https://music.apple.com/nz/album/karma/1649434004?i=1649434498&l=en-GB))*
 
