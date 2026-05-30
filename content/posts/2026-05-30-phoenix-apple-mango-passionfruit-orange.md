@@ -10,7 +10,7 @@ tags:
 
 *(Post theme: [Girl's Just Flying by Maisie Peters](https://music.apple.com/nz/album/girls-just-flying/1871502372?i=1871502853&l=en-GB))*
 
-Last time: [West's Fruit Cocktail](https://tonyandrewmeyer.com/2026/04/25/wests-fruit-cocktail/), this time [Phoenix Organics Apple, Mango, Passionfruit & Orange](https://www.asahibeverages.com/brands?prefixes=p) (they seem like too large a branch to lack a page that actually describes their product!).
+Last time: [West's Fruit Cocktail](https://tonyandrewmeyer.com/2026/04/25/wests-fruit-cocktail/), this time [Phoenix Organics Apple, Mango, Passionfruit & Orange](https://www.asahibeverages.com/brands?prefixes=p) (they seem like too large a business to lack a page that actually describes their product!).
 
 A glass bottle, 290ml, which is an unusual size, but the extra 40ml over a 250ml bottle does make a difference. It's a bit on the small size, but not so bad that I feel like I need to have two.
 
