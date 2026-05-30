@@ -14,7 +14,7 @@ Last time: [West's Fruit Cocktail](https://tonyandrewmeyer.com/2026/04/25/wests-
 
 A glass bottle, 290ml, which is an unusual size, but the extra 40ml over a 250ml bottle does make a difference. It's a bit on the small size, but not so bad that I feel like I need to have two.
 
-I see Phoenix Organics in lots of cafes and the like, although I don't think in supermarkets. This one was a birthday gift from my sister, and hand-delivered, so much simpler than usual, and without having to buy and entire case!
+I see Phoenix Organics in lots of cafes and the like, although I don't think in supermarkets. This one was a birthday gift from my sister, and hand-delivered, so much simpler than usual, and without having to buy an entire case!
 
 I'm not a big fan of the taste of passionfruit, but it's fairly muted here, taking up space with three other fruits. Overall, I enjoyed it, although I think dropping the passionfruit would likely have improved it. Unusually, I preferred it straight (but cold) over having it with ice, although that wasn't bad as such.
 
