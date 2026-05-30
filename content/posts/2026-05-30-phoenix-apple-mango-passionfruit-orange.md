@@ -2,7 +2,7 @@
 title: "Phoenix Organics Apple, Mango, Passionfruit & Orange"
 date: 2026-05-30T17:52:22+12:00
 draft: false
-slug: "phoenix-apple-mango-passionfruit-orange
+slug: "phoenix-apple-mango-passionfruit-orange"
 tags:
   - "drink"
   - "review"
