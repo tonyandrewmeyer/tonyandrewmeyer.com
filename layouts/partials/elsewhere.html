@@ -34,7 +34,7 @@
   {{- with .trakt -}}
     {{- if and .user .client_id -}}
       {{- $n := .count | default $default -}}
-      {{- $url := printf "https://api.trakt.tv/users/%s/history?limit=%d" .user $n -}}
+      {{- $url := printf "https://api.trakt.tv/users/%s/history?limit=%d&extended=full,images" .user $n -}}
       {{- $headers := dict "trakt-api-version" "2" "trakt-api-key" .client_id "User-Agent" "tonyandrewmeyer.com site build" -}}
       {{- $r := try (resources.GetRemote $url (dict "headers" $headers)) -}}
       {{- with $r.Err -}}
@@ -46,18 +46,31 @@
             {{- warnf "elsewhere: could not parse trakt history: %s" . -}}
           {{- else -}}
             {{- range $parsed.Value -}}
-              {{- $title := "" -}}{{- $link := "" -}}
+              {{- $title := "" -}}{{- $link := "" -}}{{- $img := "" -}}
+              {{- $imgs := dict -}}
               {{- if eq .type "episode" -}}
                 {{- $show := .show.title -}}
                 {{- $ep := .episode -}}
                 {{- $title = printf "%s — S%02dE%02d: %s" $show (int $ep.season) (int $ep.number) $ep.title -}}
                 {{- $link = printf "https://trakt.tv/shows/%s/seasons/%d/episodes/%d" .show.ids.slug (int $ep.season) (int $ep.number) -}}
+                {{- with .show.images -}}{{- $imgs = . -}}{{- end -}}
               {{- else if eq .type "movie" -}}
                 {{- $title = printf "%s (%d)" .movie.title (int .movie.year) -}}
                 {{- $link = printf "https://trakt.tv/movies/%s" .movie.ids.slug -}}
+                {{- with .movie.images -}}{{- $imgs = . -}}{{- end -}}
+              {{- end -}}
+              {{- range $key := slice "thumb" "poster" "fanart" -}}
+                {{- if not $img -}}
+                  {{- with index $imgs $key -}}
+                    {{- $img = index . 0 -}}
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}
+              {{- if and $img (not (hasPrefix $img "http")) -}}
+                {{- $img = printf "https://%s" $img -}}
               {{- end -}}
               {{- if $link -}}
-                {{- $shows = $shows | append (dict "title" $title "link" $link "img" "") -}}
+                {{- $shows = $shows | append (dict "title" $title "link" $link "img" $img) -}}
               {{- end -}}
             {{- end -}}
           {{- end -}}
@@ -70,17 +83,7 @@
 <aside class="sidebar">
   {{- with $reads }}
   <section class="elsewhere-block">
-    <h2 class="elsewhere-title">Reading</h2>
-    <ul class="elsewhere-list">
-      {{- range . }}
-      <li><a href="{{ .link }}" rel="noopener">{{ with .img }}<img class="elsewhere-thumb" src="{{ . }}" alt="" loading="lazy">{{ end }}<span>{{ .title }}</span></a></li>
-      {{- end }}
-    </ul>
-  </section>
-  {{- end }}
-  {{- with $shows }}
-  <section class="elsewhere-block">
-    <h2 class="elsewhere-title">On TV</h2>
+    <h2 class="elsewhere-title">Books</h2>
     <ul class="elsewhere-list">
       {{- range . }}
       <li><a href="{{ .link }}" rel="noopener">{{ with .img }}<img class="elsewhere-thumb" src="{{ . }}" alt="" loading="lazy">{{ end }}<span>{{ .title }}</span></a></li>
@@ -90,7 +93,17 @@
   {{- end }}
   {{- with $films }}
   <section class="elsewhere-block">
-    <h2 class="elsewhere-title">Watching</h2>
+    <h2 class="elsewhere-title">Film</h2>
+    <ul class="elsewhere-list">
+      {{- range . }}
+      <li><a href="{{ .link }}" rel="noopener">{{ with .img }}<img class="elsewhere-thumb" src="{{ . }}" alt="" loading="lazy">{{ end }}<span>{{ .title }}</span></a></li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- with $shows }}
+  <section class="elsewhere-block">
+    <h2 class="elsewhere-title">TV</h2>
     <ul class="elsewhere-list">
       {{- range . }}
       <li><a href="{{ .link }}" rel="noopener">{{ with .img }}<img class="elsewhere-thumb" src="{{ . }}" alt="" loading="lazy">{{ end }}<span>{{ .title }}</span></a></li>
