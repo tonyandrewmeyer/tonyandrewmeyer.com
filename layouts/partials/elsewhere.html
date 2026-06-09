@@ -2,20 +2,23 @@
        time. Each block only renders when its account is configured in
        [params.elsewhere] and the feed returns items. */ -}}
 {{- $cfg := .Site.Params.elsewhere -}}
-{{- $count := (and $cfg $cfg.count) | default 4 -}}
+{{- $default := (and $cfg $cfg.count) | default 4 -}}
 {{- $reads := slice -}}
 {{- $films := slice -}}
 {{- $photos := slice -}}
+{{- $shows := slice -}}
 {{- with $cfg -}}
   {{- with .goodreads -}}
     {{- with .user_id -}}
       {{- $shelf := $cfg.goodreads.shelf | default "read" -}}
-      {{- $reads = partial "feed-items.html" (dict "url" (printf "https://www.goodreads.com/review/list_rss/%s?shelf=%s" . $shelf) "count" $count) -}}
+      {{- $n := $cfg.goodreads.count | default $default -}}
+      {{- $reads = partial "feed-items.html" (dict "url" (printf "https://www.goodreads.com/review/list_rss/%s?shelf=%s" . $shelf) "count" $n) -}}
     {{- end -}}
   {{- end -}}
   {{- with .letterboxd -}}
     {{- with .user -}}
-      {{- $films = partial "feed-items.html" (dict "url" (printf "https://letterboxd.com/%s/rss/" .) "count" $count) -}}
+      {{- $n := $cfg.letterboxd.count | default $default -}}
+      {{- $films = partial "feed-items.html" (dict "url" (printf "https://letterboxd.com/%s/rss/" .) "count" $n) -}}
     {{- end -}}
   {{- end -}}
   {{- with .flickr -}}
@@ -24,15 +27,60 @@
       {{- $nsid = partial "flickr-nsid.html" (dict "user" .user) -}}
     {{- end -}}
     {{- with $nsid -}}
-      {{- $photos = partial "feed-items.html" (dict "url" (printf "https://api.flickr.com/services/feeds/photos_public.gne?id=%s&format=rss2" .) "count" $count) -}}
+      {{- $n := $cfg.flickr.count | default $default -}}
+      {{- $photos = partial "feed-items.html" (dict "url" (printf "https://api.flickr.com/services/feeds/photos_public.gne?id=%s&format=rss2" .) "count" $n) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with .trakt -}}
+    {{- if and .user .client_id -}}
+      {{- $n := .count | default $default -}}
+      {{- $url := printf "https://api.trakt.tv/users/%s/history?limit=%d" .user $n -}}
+      {{- $headers := dict "trakt-api-version" "2" "trakt-api-key" .client_id "User-Agent" "tonyandrewmeyer.com site build" -}}
+      {{- $r := try (resources.GetRemote $url (dict "headers" $headers)) -}}
+      {{- with $r.Err -}}
+        {{- warnf "elsewhere: could not fetch trakt history: %s" . -}}
+      {{- else -}}
+        {{- with $r.Value -}}
+          {{- $parsed := try (transform.Unmarshal .) -}}
+          {{- with $parsed.Err -}}
+            {{- warnf "elsewhere: could not parse trakt history: %s" . -}}
+          {{- else -}}
+            {{- range $parsed.Value -}}
+              {{- $title := "" -}}{{- $link := "" -}}
+              {{- if eq .type "episode" -}}
+                {{- $show := .show.title -}}
+                {{- $ep := .episode -}}
+                {{- $title = printf "%s — S%02dE%02d: %s" $show (int $ep.season) (int $ep.number) $ep.title -}}
+                {{- $link = printf "https://trakt.tv/shows/%s/seasons/%d/episodes/%d" .show.ids.slug (int $ep.season) (int $ep.number) -}}
+              {{- else if eq .type "movie" -}}
+                {{- $title = printf "%s (%d)" .movie.title (int .movie.year) -}}
+                {{- $link = printf "https://trakt.tv/movies/%s" .movie.ids.slug -}}
+              {{- end -}}
+              {{- if $link -}}
+                {{- $shows = $shows | append (dict "title" $title "link" $link "img" "") -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- if or $reads $films $photos -}}
+{{- if or $reads $films $photos $shows -}}
 <aside class="sidebar">
   {{- with $reads }}
   <section class="elsewhere-block">
     <h2 class="elsewhere-title">Reading</h2>
+    <ul class="elsewhere-list">
+      {{- range . }}
+      <li><a href="{{ .link }}" rel="noopener">{{ with .img }}<img class="elsewhere-thumb" src="{{ . }}" alt="" loading="lazy">{{ end }}<span>{{ .title }}</span></a></li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- with $shows }}
+  <section class="elsewhere-block">
+    <h2 class="elsewhere-title">On TV</h2>
     <ul class="elsewhere-list">
       {{- range . }}
       <li><a href="{{ .link }}" rel="noopener">{{ with .img }}<img class="elsewhere-thumb" src="{{ . }}" alt="" loading="lazy">{{ end }}<span>{{ .title }}</span></a></li>

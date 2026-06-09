@@ -38,17 +38,27 @@ enableEmoji = true
 # block only renders when its identifier below is set. The feed hosts are not
 # reachable from the sandbox, so these populate on the GitHub Actions deploy.
 [params.elsewhere]
-  count = 4
+  count = 4  # default if a service doesn't override
   [params.elsewhere.goodreads]
     user_id = "2229155"  # numeric id from goodreads.com/user/show/<id>-name
     shelf = "read"
+    count = 5
   [params.elsewhere.flickr]
     # Prefer nsid (12345678@N00) when known; otherwise the build resolves it
     # from the photostream page at https://flickr.com/photos/<user>/.
     nsid = ""
     user = "littlechicken"
+    count = 9
   [params.elsewhere.letterboxd]
     user = "tonyandrewmeyer"
+    count = 4
+  [params.elsewhere.trakt]
+    user = "tonyandrewmeyer"
+    # Client ID from a Trakt app at https://trakt.tv/oauth/applications. Sent
+    # as the trakt-api-key header on a public read of the user's history; no
+    # OAuth and no VIP required. Leave empty to skip the block.
+    client_id = "0f6583ea12d886f94e7bf59be3199d2a6c39dd0be98c5d6a9e2d0987cbc70820"
+    count = 4
 
 [markup.goldmark.renderer]
   unsafe = true  # allow inline HTML retained from old posts
