@@ -28,6 +28,11 @@ enableEmoji = true
   name = "Tags"
   url = "/tags/"
   weight = 3
+[[menu.main]]
+  name = "📚"
+  url = "/book-list/j-tolhopf/"
+  weight = 4
+  title = "J Tolhopf Book Club"
 
 [params]
   description = "Personal blog of Tony Andrew Meyer."

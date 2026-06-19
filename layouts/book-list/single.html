@@ -25,7 +25,6 @@
         {{- $author := printf "%v" (.author_name | default "") -}}
         {{- $img := printf "%v" (.book_large_image_url | default (.book_medium_image_url | default (.book_image_url | default ""))) -}}
         {{- $desc := printf "%v" (.book_description | default "") -}}
-        {{- $review := printf "%v" (.user_review | default "") -}}
         {{- $rating := printf "%v" (.user_rating | default "0") -}}
         {{- $avg := printf "%v" (.average_rating | default "") -}}
         {{- $pages := printf "%v" (.book.num_pages | default (.num_pages | default "")) -}}
@@ -40,7 +39,6 @@
             "author" $author
             "img" $img
             "desc" $desc
-            "review" $review
             "rating" $rating
             "avg" $avg
             "pages" $pages
@@ -79,14 +77,12 @@
           {{- with .avg }} <span class="booklist-avg">avg {{ . }}</span>{{ end }}
           {{- with .pages }} · {{ . }} pages{{ end }}
           {{- with .pub }} · published {{ . }}{{ end }}
-          {{- with .isbn }} · ISBN {{ . }}{{ end }}
         </p>
         {{- with .read }}{{- if . }}
           {{- $raw := . -}}
           {{- $t := try (time.AsTime $raw) -}}
           <p class="booklist-dates">Read {{ with $t.Value }}{{ dateFormat "2 January 2006" . }}{{ else }}{{ $raw }}{{ end }}</p>
         {{- end }}{{ end }}
-        {{- with .review }}<div class="booklist-review">{{ . | safeHTML }}</div>{{ end }}
         {{- with .desc }}<details class="booklist-desc"><summary>Description</summary><div>{{ . | safeHTML }}</div></details>{{ end }}
       </div>
     </li>
