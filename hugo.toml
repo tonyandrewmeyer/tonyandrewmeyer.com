@@ -35,7 +35,7 @@ enableEmoji = true
   title = "J Tolhopf Book Club"
 
 [params]
-  description = "Personal blog of Tony Andrew Meyer."
+  description = "Personal blog of Tony Meyer, dad, dev, drinks."
   # External links (migrated from the WordPress nav menu) render in the footer.
   # See data/menu_extra.json.
 
