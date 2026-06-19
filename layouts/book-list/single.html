@@ -1,0 +1,99 @@
+{{ define "main" }}
+{{- $user := .Params.user_id -}}
+{{- $shelf := .Params.shelf -}}
+{{- $count := .Params.count | default 100 -}}
+{{- $url := printf "https://www.goodreads.com/review/list_rss/%s?shelf=%s&per_page=%d" $user $shelf $count -}}
+{{- $ua := "Mozilla/5.0 (compatible; tonyandrewmeyer.com site build; +https://tonyandrewmeyer.com)" -}}
+{{- $books := slice -}}
+{{- $fetched := try (resources.GetRemote $url (dict "headers" (dict "User-Agent" $ua))) -}}
+{{- with $fetched.Err -}}
+  {{- warnf "book-list: could not fetch %q: %s" $url . -}}
+{{- else -}}
+  {{- with $fetched.Value -}}
+    {{- $parsed := try (transform.Unmarshal .) -}}
+    {{- with $parsed.Err -}}
+      {{- warnf "book-list: could not parse %q: %s" $url . -}}
+    {{- else -}}
+      {{- $data := $parsed.Value -}}
+      {{- $channel := $data -}}
+      {{- if reflect.IsMap $data -}}{{- with $data.channel -}}{{- $channel = . -}}{{- end -}}{{- end -}}
+      {{- $items := $channel.item -}}
+      {{- if and $items (not (reflect.IsSlice $items)) -}}{{- $items = slice $items -}}{{- end -}}
+      {{- range $items -}}
+        {{- $title := printf "%v" (.title | default "") -}}
+        {{- $link := printf "%v" (.link | default "") -}}
+        {{- $author := printf "%v" (.author_name | default "") -}}
+        {{- $img := printf "%v" (.book_large_image_url | default (.book_medium_image_url | default (.book_image_url | default ""))) -}}
+        {{- $desc := printf "%v" (.book_description | default "") -}}
+        {{- $review := printf "%v" (.user_review | default "") -}}
+        {{- $rating := printf "%v" (.user_rating | default "0") -}}
+        {{- $avg := printf "%v" (.average_rating | default "") -}}
+        {{- $pages := printf "%v" (.book.num_pages | default (.num_pages | default "")) -}}
+        {{- $pub := printf "%v" (.book_published | default "") -}}
+        {{- $isbn := printf "%v" (.isbn | default "") -}}
+        {{- $shelves := printf "%v" (.user_shelves | default "") -}}
+        {{- $read := printf "%v" (.user_read_at | default "") -}}
+        {{- $added := printf "%v" (.user_date_added | default "") -}}
+        {{- $books = $books | append (dict
+            "title" $title
+            "link" $link
+            "author" $author
+            "img" $img
+            "desc" $desc
+            "review" $review
+            "rating" $rating
+            "avg" $avg
+            "pages" $pages
+            "pub" $pub
+            "isbn" $isbn
+            "shelves" $shelves
+            "read" $read
+            "added" $added) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<article class="booklist">
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="post-content">{{ .Content }}</div>
+
+  {{- if $books }}
+  <p class="booklist-count">{{ len $books }} book{{ if ne (len $books) 1 }}s{{ end }}.</p>
+  <ul class="booklist-items">
+    {{- range $books }}
+    <li class="booklist-item">
+      {{- $link := .link -}}
+      {{- with .img }}<a class="booklist-cover" href="{{ $link }}" rel="noopener"><img src="{{ . }}" alt="" loading="lazy"></a>{{ end }}
+      <div class="booklist-body">
+        <h2 class="booklist-title"><a href="{{ .link }}" rel="noopener">{{ .title }}</a></h2>
+        {{- with .author }}<p class="booklist-author">{{ . }}</p>{{ end }}
+        <p class="booklist-meta">
+          {{- $r := int .rating -}}
+          {{- if gt $r 0 -}}
+            <span class="booklist-rating" title="My rating: {{ $r }}/5">
+              {{- range seq 1 5 -}}{{- if le . $r -}}★{{- else -}}☆{{- end -}}{{- end -}}
+            </span>
+          {{- end -}}
+          {{- with .avg }} <span class="booklist-avg">avg {{ . }}</span>{{ end }}
+          {{- with .pages }} · {{ . }} pages{{ end }}
+          {{- with .pub }} · published {{ . }}{{ end }}
+          {{- with .isbn }} · ISBN {{ . }}{{ end }}
+        </p>
+        {{- with .read }}{{- if . }}
+          {{- $raw := . -}}
+          {{- $t := try (time.AsTime $raw) -}}
+          <p class="booklist-dates">Read {{ with $t.Value }}{{ dateFormat "2 January 2006" . }}{{ else }}{{ $raw }}{{ end }}</p>
+        {{- end }}{{ end }}
+        {{- with .review }}<div class="booklist-review">{{ . | safeHTML }}</div>{{ end }}
+        {{- with .desc }}<details class="booklist-desc"><summary>Description</summary><div>{{ . | safeHTML }}</div></details>{{ end }}
+      </div>
+    </li>
+    {{- end }}
+  </ul>
+  {{- else }}
+  <p>Couldn't load the shelf at build time. <a href="https://www.goodreads.com/review/list/{{ $user }}?shelf={{ $shelf }}" rel="noopener">View on Goodreads</a>.</p>
+  {{- end }}
+</article>
+{{ end }}

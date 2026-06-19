@@ -129,6 +129,29 @@ body:has(.sidebar) .layout { grid-template-columns: minmax(0, 1fr) 14rem; }
 }
 .deadlink-close:hover { border-color: var(--accent); color: var(--accent); }
 
+.booklist-count { color: var(--muted); font-size: .9rem; margin-top: .5rem; }
+.booklist-items { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.booklist-item { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
+.booklist-item:last-child { border-bottom: none; }
+.booklist-cover img { width: 5rem; height: auto; display: block; border-radius: 3px; }
+.booklist-body { min-width: 0; }
+.booklist-title { font-size: 1.05rem; margin: 0 0 .15rem; line-height: 1.3; }
+.booklist-title a { color: var(--fg); }
+.booklist-author { margin: 0 0 .3rem; color: var(--muted); font-size: .9rem; }
+.booklist-meta { margin: 0; color: var(--muted); font-size: .85rem; }
+.booklist-rating { color: var(--fg); letter-spacing: .05em; }
+.booklist-dates { margin: .2rem 0 0; color: var(--muted); font-size: .85rem; }
+.booklist-review { margin-top: .6rem; font-size: .95rem; }
+.booklist-review p:first-child { margin-top: 0; }
+.booklist-desc { margin-top: .6rem; font-size: .9rem; color: var(--muted); }
+.booklist-desc summary { cursor: pointer; color: var(--accent); }
+.booklist-desc[open] summary { color: var(--muted); }
+.booklist-desc img { display: none; }
+@media (max-width: 32rem) {
+  .booklist-item { grid-template-columns: 4rem 1fr; }
+  .booklist-cover img { width: 4rem; }
+}
+
 .site-footer { border-top: 1px solid var(--border); padding: 1.5rem 0; margin-top: 2rem; font-size: .85rem; color: var(--muted); }
 .links-out { display: flex; flex-wrap: wrap; gap: .3rem .9rem; margin-bottom: .6rem; }
 .links-out-label { font-weight: 600; }
