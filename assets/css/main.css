@@ -10,6 +10,12 @@
 @media (prefers-color-scheme: dark) {
   :root { --fg: #e6e6e6; --muted: #9a9a9a; --bg: #161616; --accent: #6db3f2; --border: #2c2c2c; }
 }
+:root[data-theme="light"] {
+  --fg: #1a1a1a; --muted: #666; --bg: #fdfdfd; --accent: #0b5fa5; --border: #e5e5e5;
+}
+:root[data-theme="dark"] {
+  --fg: #e6e6e6; --muted: #9a9a9a; --bg: #161616; --accent: #6db3f2; --border: #2c2c2c;
+}
 * { box-sizing: border-box; }
 html { font-size: 17px; }
 body {
@@ -32,6 +38,20 @@ blockquote { margin: 1rem 0; padding: .2rem 1rem; border-left: 3px solid var(--b
 .site-title { font-weight: 700; font-size: 1.2rem; color: var(--fg); }
 .site-nav { display: flex; gap: 1rem; margin-left: auto; }
 .site-nav a { color: var(--muted); }
+.theme-toggle {
+  font: inherit;
+  line-height: 1;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 4px;
+  padding: .15rem .45rem;
+  margin-left: .4rem;
+  cursor: pointer;
+  vertical-align: baseline;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle .theme-toggle-label { margin-left: .3rem; }
 
 .layout { padding-top: 2rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.4rem; align-items: start; }
 .content { min-width: 0; }

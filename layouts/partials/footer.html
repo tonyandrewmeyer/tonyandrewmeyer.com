@@ -11,6 +11,9 @@
     <p class="colophon">
       &copy; {{ now.Year }} {{ .Site.Title }}.
       <a href="{{ "index.xml" | relURL }}">RSS</a>.
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle colour theme" title="Toggle colour theme">
+        <span class="theme-toggle-icon" aria-hidden="true">🌗</span><span class="theme-toggle-label">auto</span>
+      </button>
     </p>
   </div>
 </footer>
