@@ -6,6 +6,18 @@ slug: "razza-raspberry-lemonade"
 tags:
   - "drink"
   - "review"
+drink:
+  photo: "/uploads/drinks/razza-raspberry-lemonade.png"
+  producer: "Karma Drinks"
+  product: "Organic Razza Raspberry Lemonade"
+  type: "soft drink"
+  packaging: "can"
+  volume_ml: 330
+  rating: 6.5
+  url: "https://karmadrinks.co.nz/products/razza-raspberry-lemonade"
+  availability:
+    - "supermarkets"
+    - "cafés"
 ---
 
 *(Post theme: [lemonade by Cassie Henderson](https://music.apple.com/nz/album/lemonade/1786090278?i=1786090903&l=en-GB))*

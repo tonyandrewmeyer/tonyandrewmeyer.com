@@ -9,14 +9,21 @@
   {{ $sum := 0.0 }}
   {{ range $drinks }}{{ $sum = add $sum .Params.drink.rating }}{{ end }}
   {{ $avg := 0.0 }}{{ if gt $count 0 }}{{ $avg = div $sum $count }}{{ end }}
-  {{ $byRating := $drinks.ByParam "drink.rating" }}
-  {{ $top := index ($byRating.Reverse) 0 }}
+  {{ $byRating := ($drinks.ByParam "drink.rating").Reverse }}
+  {{ $topRating := 0.0 }}
+  {{ with index $byRating 0 }}{{ $topRating = .Params.drink.rating }}{{ end }}
+  {{ $topDrinks := where $byRating "Params.drink.rating" $topRating }}
 
   <dl class="drinks-stats">
     <div><dt>Tried</dt><dd>{{ $count }}</dd></div>
     <div><dt>Average</dt><dd>{{ printf "%.1f" $avg }}/10</dd></div>
-    {{ with $top }}
-      <div><dt>Top</dt><dd><a href="{{ .RelPermalink }}">{{ .Params.drink.producer }} {{ .Params.drink.product }}</a> ({{ .Params.drink.rating }})</dd></div>
+    {{ if $topDrinks }}
+      <div>
+        <dt>Top ({{ $topRating }})</dt>
+        <dd>
+          {{ range $i, $t := $topDrinks }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.Params.drink.producer }} {{ $t.Params.drink.product }}</a>{{ end }}
+        </dd>
+      </div>
     {{ end }}
   </dl>
 
@@ -46,7 +53,7 @@
       </tr>
     </thead>
     <tbody>
-      {{ range $drinks }}
+      {{ range $byRating }}
         {{ $d := .Params.drink }}
         <tr data-type="{{ $d.type }}">
           <td class="drinks-photo-cell">

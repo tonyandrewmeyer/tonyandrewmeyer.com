@@ -6,6 +6,17 @@ slug: "barrier-buzz-lemonade"
 tags:
   - "drink"
   - "review"
+drink:
+  photo: "/uploads/drinks/barrier-buzz-lemonade.jpg"
+  producer: "The Aotea Company"
+  product: "Barrier Buzz Lemonade"
+  type: "soft drink"
+  packaging: "glass bottle"
+  volume_ml: 300
+  rating: 8.0
+  url: "https://theaoteacompany.co.nz/products/barrier-buzz-lemonade"
+  availability:
+    - "online direct"
 ---
 
 *(Post theme: [Don't Worry Bout' It by Beyond the Beat & Liberty](https://music.apple.com/nz/album/dont-worry-bout-it/1809868503?i=1809868511&l=en-GB))*

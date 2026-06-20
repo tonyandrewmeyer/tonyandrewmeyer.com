@@ -10,7 +10,7 @@
     <main class="content">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ partial "elsewhere.html" . }}
+    {{ if not .Params.hide_sidebar }}{{ partial "elsewhere.html" . }}{{ end }}
   </div>
   {{ partial "footer.html" . }}
   <dialog id="deadlink-dialog" class="deadlink-dialog" aria-labelledby="deadlink-title">

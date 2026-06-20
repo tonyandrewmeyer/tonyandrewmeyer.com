@@ -6,6 +6,17 @@ slug: "phoenix-apple-mango-passionfruit-orange"
 tags:
   - "drink"
   - "review"
+drink:
+  photo: "/uploads/drinks/phoenix-apple-mango-passionfruit-orange.png"
+  producer: "Phoenix Organics"
+  product: "Apple, Mango, Passionfruit & Orange"
+  type: "juice"
+  packaging: "glass bottle"
+  volume_ml: 290
+  rating: 7.5
+  url: "https://www.asahibeverages.com/brands?prefixes=p"
+  availability:
+    - "cafés"
 ---
 
 *(Post theme: [Girls Just Flying by Maisie Peters](https://music.apple.com/nz/album/girls-just-flying/1871502372?i=1871502853&l=en-GB))*

@@ -6,6 +6,17 @@ slug: "lemon-and-te-aroha"
 tags:
   - "drink"
   - "review"
+drink:
+  photo: "/uploads/drinks/lemon-and-te-aroha.jpg"
+  producer: "Te Aroha Mineral Water"
+  product: "Lemon and Te Aroha"
+  type: "soft drink"
+  packaging: "glass bottle"
+  volume_ml: 330
+  rating: 7.75
+  url: "https://www.tearohamineralwater.co.nz"
+  availability:
+    - "online direct"
 ---
 
 *(Post theme: [hint by Frankie Venter](https://music.apple.com/nz/album/hint/1876994467?i=1876994469&l=en-GB))*

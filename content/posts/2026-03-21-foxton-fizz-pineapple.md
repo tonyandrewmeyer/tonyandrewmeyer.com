@@ -8,6 +8,7 @@ tags:
 pingback_id: "615"
 pingback_count: 1
 drink:
+  photo: "/uploads/drinks/foxton-fizz-pineapple.jpg"
   producer: "Foxton Fizz"
   product: "Pineapple"
   type: "soft drink"

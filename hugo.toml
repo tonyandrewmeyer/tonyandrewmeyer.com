@@ -21,17 +21,18 @@ enableEmoji = true
   url = "/posts/"
   weight = 1
 [[menu.main]]
-  name = "Drinks"
-  url = "/drinks/"
-  weight = 2
-[[menu.main]]
   name = "Archive"
   url = "/archive/"
-  weight = 3
+  weight = 2
 [[menu.main]]
   name = "Tags"
   url = "/tags/"
+  weight = 3
+[[menu.main]]
+  name = "🧃"
+  url = "/drinks/"
   weight = 4
+  title = "Drinks"
 [[menu.main]]
   name = "📚"
   url = "/book-list/j-tolhopf/"
