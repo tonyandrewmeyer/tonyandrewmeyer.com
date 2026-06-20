@@ -29,9 +29,14 @@ enableEmoji = true
   url = "/tags/"
   weight = 3
 [[menu.main]]
+  name = "🧃"
+  url = "/drinks/"
+  weight = 4
+  title = "Drinks"
+[[menu.main]]
   name = "📚"
   url = "/book-list/j-tolhopf/"
-  weight = 4
+  weight = 5
   title = "J Tolhopf Book Club"
 
 [params]

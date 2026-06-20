@@ -5,6 +5,17 @@ slug: "wests-fruit-cocktail"
 tags:
   - "drink"
   - "review"
+drink:
+  photo: "/uploads/drinks/wests-fruit-cocktail.jpg"
+  producer: "Wests"
+  product: "Fruit Cocktail"
+  type: "soft drink"
+  packaging: "plastic bottle"
+  volume_ml: 350
+  rating: 5.1
+  url: "https://wests.co.nz/products/fruit-cocktail"
+  availability:
+    - "online direct"
 ---
 *(Post theme: [Taste (covered) by Daisy Grenade](https://music.apple.com/nz/album/taste/1781341923?i=1781341924&l=en-GB))*
 

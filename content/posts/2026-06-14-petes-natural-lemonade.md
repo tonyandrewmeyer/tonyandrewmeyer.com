@@ -6,6 +6,18 @@ slug: "petes-natural-lemonade"
 tags:
   - "drink"
   - "review"
+drink:
+  photo: "/uploads/drinks/petes-natural-lemonade.png"
+  producer: "Pete's Natural"
+  product: "Lemonade"
+  type: "soft drink"
+  packaging: "can"
+  volume_ml: 250
+  rating: 6.0
+  url: "https://petesnatural.co.nz/shop/petes-natural-lemonade-12-pack-cans/"
+  availability:
+    - "New World"
+    - "online direct"
 ---
 
 *(Post theme: [Move to LA (I Don't Wanna) by Brooke Alexx](https://music.apple.com/nz/album/move-to-la-i-dont-wanna/1807640843?i=1807640869&l=en-GB))*

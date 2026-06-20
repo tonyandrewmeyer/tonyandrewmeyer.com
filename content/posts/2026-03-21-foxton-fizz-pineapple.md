@@ -7,6 +7,18 @@ tags:
   - "review"
 pingback_id: "615"
 pingback_count: 1
+drink:
+  photo: "/uploads/drinks/foxton-fizz-pineapple.jpg"
+  producer: "Foxton Fizz"
+  product: "Pineapple"
+  type: "soft drink"
+  packaging: "glass bottle"
+  volume_ml: 250
+  rating: 10
+  url: "https://foxtonfizz.com/products/foxton-fizz-pineapple"
+  availability:
+    - "New World"
+    - "online direct"
 ---
 *(Post theme: [Soda Pop from K-Pop Demon Hunters](https://music.apple.com/nz/album/soda-pop/1820264137?i=1820264147&l=en-GB))*
 

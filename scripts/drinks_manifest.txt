@@ -1,0 +1,10 @@
+foxton-fizz-pineapple	https://foxtonfizz.com/products/foxton-fizz-pineapple
+karma-drinks-apple-juice	https://karmadrinks.co.nz/products/karma-apple-juice
+aroha-sparkling-feijoa	https://arohadrinks.co.nz/products/sparkling-feijoa
+hakanoa-dry-ginger-beer	https://www.hakanoa-handmade.co.nz/products/wild-ferment-dry-ginger-beer
+wests-fruit-cocktail	https://wests.co.nz/products/fruit-cocktail
+phoenix-apple-mango-passionfruit-orange	https://www.asahibeverages.com/brands?prefixes=p
+lemon-and-te-aroha	https://www.tearohamineralwater.co.nz
+barrier-buzz-lemonade	https://theaoteacompany.co.nz/products/barrier-buzz-lemonade
+razza-raspberry-lemonade	https://karmadrinks.co.nz/products/razza-raspberry-lemonade
+petes-natural-lemonade	https://petesnatural.co.nz/shop/petes-natural-lemonade-12-pack-cans/

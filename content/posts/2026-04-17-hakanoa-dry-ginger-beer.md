@@ -7,6 +7,17 @@ tags:
   - "review"
 pingback_id: "622"
 pingback_count: 1
+drink:
+  photo: "/uploads/drinks/hakanoa-dry-ginger-beer.jpg"
+  producer: "Hakanoa"
+  product: "Dry Ginger Beer"
+  type: "ginger beer"
+  packaging: "glass bottle"
+  volume_ml: 330
+  rating: 8.3
+  url: "https://www.hakanoa-handmade.co.nz/products/wild-ferment-dry-ginger-beer"
+  availability:
+    - "online direct"
 ---
 *(Post theme: [Rain by Dragon](https://music.apple.com/nz/album/rain/1442499776?i=1442499787&l=en-GB))*
 
