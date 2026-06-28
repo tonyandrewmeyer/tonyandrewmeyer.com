@@ -9,3 +9,4 @@ barrier-buzz-lemonade	https://theaoteacompany.co.nz/products/barrier-buzz-lemona
 razza-raspberry-lemonade	https://karmadrinks.co.nz/products/razza-raspberry-lemonade
 petes-natural-lemonade	https://petesnatural.co.nz/shop/petes-natural-lemonade-12-pack-cans/
 lewis-road-boysenberry-cheesecake	https://lewisroadcreamery.co.nz/products/boysenberry-cheesecake
+aroha-coes-cloudy-lemonade	https://arohadrinks.co.nz/products/coes-cloudy-lemonade
