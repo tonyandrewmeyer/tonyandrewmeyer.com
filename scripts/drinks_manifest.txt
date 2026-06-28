@@ -10,3 +10,4 @@ razza-raspberry-lemonade	https://karmadrinks.co.nz/products/razza-raspberry-lemo
 petes-natural-lemonade	https://petesnatural.co.nz/shop/petes-natural-lemonade-12-pack-cans/
 lewis-road-boysenberry-cheesecake	https://lewisroadcreamery.co.nz/products/boysenberry-cheesecake
 aroha-coes-cloudy-lemonade	https://arohadrinks.co.nz/products/coes-cloudy-lemonade
+love-muscle-pineapple-sparkling-protein-water	https://lovemuscle.co.nz/products/pineapple-sparkling-protein-water
