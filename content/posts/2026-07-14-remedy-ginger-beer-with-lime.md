@@ -10,7 +10,7 @@ drink:
   photo: "/uploads/drinks/remedy-ginger-beer-with-lime.jpg"
   producer: "Remedy"
   product: "Ginger Beer With Lime"
-  type: "soft drink"
+  type: "ginger beer"
   packaging: "glass bottle"
   volume_ml: 330
   rating: 4.7
