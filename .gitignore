@@ -3,3 +3,5 @@
 .hugo_build.lock
 hugo.deb
 .DS_Store
+__pycache__/
+*.py[cod]
