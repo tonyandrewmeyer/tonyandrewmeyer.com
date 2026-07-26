@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download product images for the drinks tracker.
+r"""Download product images for the drinks tracker.
 
 Reads scripts/drinks_manifest.txt (lines of `<post-slug>\\t<product-url>`),
 fetches each product page, extracts og:image, downloads it to
@@ -10,8 +10,8 @@ Run from a network that can reach the producer sites (Cloudflare blocks the
 Claude web sandbox). Re-runnable; skips already-downloaded files but always
 rewrites the photo field so extensions stay in sync.
 """
+
 import mimetypes
-import os
 import re
 import sys
 import urllib.error
@@ -22,7 +22,10 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "scripts" / "drinks_manifest.txt"
 DEST_DIR = ROOT / "static" / "uploads" / "drinks"
 POSTS_DIR = ROOT / "content" / "posts"
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 "
+    "(KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+)
 
 OG_RE = re.compile(
     r"""<meta[^>]+property=["']og:image["'][^>]*content=["']([^"']+)["']""",
@@ -35,12 +38,14 @@ OG_RE_ALT = re.compile(
 
 
 def fetch(url: str) -> tuple[bytes, str]:
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-    with urllib.request.urlopen(req, timeout=30) as r:
+    """Fetch a URL, returning its body and Content-Type."""
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})  # noqa: S310
+    with urllib.request.urlopen(req, timeout=30) as r:  # noqa: S310
         return r.read(), r.headers.get("Content-Type", "")
 
 
 def og_image(html: str, base: str) -> str | None:
+    """Return the absolute og:image URL from a page, if it has one."""
     m = OG_RE.search(html) or OG_RE_ALT.search(html)
     if not m:
         return None
@@ -49,21 +54,20 @@ def og_image(html: str, base: str) -> str | None:
         src = "https:" + src
     elif src.startswith("/"):
         from urllib.parse import urljoin
+
         src = urljoin(base, src)
     # Strip Shopify-style query-string size hints so we get the original.
     return src.split("?", 1)[0]
 
 
 def ext_for(content_type: str, url: str) -> str:
+    """Choose a file extension from the Content-Type, falling back to the URL."""
     ct = content_type.split(";", 1)[0].strip().lower()
     ext = mimetypes.guess_extension(ct) if ct else None
     if not ext:
         # Fall back to URL extension, then .jpg.
         _, _, tail = url.rpartition("/")
-        if "." in tail:
-            ext = "." + tail.rsplit(".", 1)[1].lower()
-        else:
-            ext = ".jpg"
+        ext = "." + tail.rsplit(".", 1)[1].lower() if "." in tail else ".jpg"
     if ext == ".jpe":
         ext = ".jpg"
     return ext
@@ -86,7 +90,9 @@ def update_post(slug: str, photo_path: str) -> bool:
     text = post.read_text()
     new_line_value = f'"{photo_path}"'
     if PHOTO_LINE_RE.search(text):
-        text = PHOTO_LINE_RE.sub(lambda m: f"{m.group('indent')}photo: {new_line_value}", text, count=1)
+        text = PHOTO_LINE_RE.sub(
+            lambda m: f"{m.group('indent')}photo: {new_line_value}", text, count=1
+        )
     else:
         # Insert `  photo: "..."` immediately after the `drink:` line.
         m = DRINK_BLOCK_RE.search(text)
@@ -100,6 +106,7 @@ def update_post(slug: str, photo_path: str) -> bool:
 
 
 def main() -> int:
+    """Download the og:image for each drink in the manifest."""
     DEST_DIR.mkdir(parents=True, exist_ok=True)
     ok = skipped = failed = 0
     for line in MANIFEST.read_text().splitlines():
