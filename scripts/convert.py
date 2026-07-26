@@ -8,6 +8,7 @@ Outputs:
   data/menu_extra.json             nav menu (external links)
   scripts/media_manifest.txt       original media URLs -> local /uploads paths
 """
+
 import json
 import os
 import re
@@ -32,11 +33,13 @@ media_map = {}  # original_url -> local_path
 
 
 def txt(el, path):
+    """Return the text of the first child matching path, or an empty string."""
     node = el.find(path, NS)
     return node.text if node is not None and node.text is not None else ""
 
 
 def slugify(value):
+    """Convert a title into a URL-safe slug."""
     value = re.sub(r"[^\w\s-]", "", value.lower()).strip()
     value = re.sub(r"[\s_-]+", "-", value)
     return value or "post"
@@ -44,6 +47,7 @@ def slugify(value):
 
 def rewrite_media(html):
     """Rewrite wp-content/uploads URLs to local /uploads paths; record them."""
+
     def repl(m):
         url = m.group(0)
         base = url.split("?", 1)[0].split("#", 1)[0]  # drop resize/query params
@@ -55,7 +59,8 @@ def rewrite_media(html):
 
     # match full upload URLs on the blog host
     pattern = re.compile(
-        r"https?://(?:[a-z0-9.-]*\.)?" + re.escape(SITE_HOST)
+        r"https?://(?:[a-z0-9.-]*\.)?"
+        + re.escape(SITE_HOST)
         + r"/wp-content/uploads/[^\s\"'<>)]+",
         re.I,
     )
@@ -68,6 +73,7 @@ def strip_blocks(html):
 
 
 def html_to_md(html):
+    """Convert post HTML into Markdown."""
     if not html.strip():
         return ""
     html = strip_blocks(html)
@@ -86,10 +92,12 @@ def html_to_md(html):
 
 
 def yaml_quote(s):
+    """Quote a string for safe use as a YAML scalar."""
     return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
 def parse_wp_date(s):
+    """Parse a WordPress timestamp, returning None when absent or zeroed."""
     s = s.strip()
     if not s or s.startswith("0000"):
         return None
@@ -100,7 +108,8 @@ def parse_wp_date(s):
 
 
 def main(xml_path):
-    tree = ET.parse(xml_path)
+    """Convert a WordPress export at xml_path into Hugo content."""
+    tree = ET.parse(xml_path)  # noqa: S314
     channel = tree.getroot().find("channel")
 
     posts = pages = comments_total = pingbacks_total = 0
@@ -155,31 +164,37 @@ def main(xml_path):
             cdate = parse_wp_date(txt(c, "wp:comment_date"))
             ctype = txt(c, "wp:comment_type")
             if ctype in ("pingback", "trackback"):
-                plist.append({
-                    "title": unescape(txt(c, "wp:comment_author").strip()),
-                    "url": txt(c, "wp:comment_author_url").strip(),
-                    "date": cdate.strftime("%Y-%m-%dT%H:%M:%S+12:00") if cdate else "",
-                    "kind": ctype,
-                })
+                plist.append(
+                    {
+                        "title": unescape(txt(c, "wp:comment_author").strip()),
+                        "url": txt(c, "wp:comment_author_url").strip(),
+                        "date": cdate.strftime("%Y-%m-%dT%H:%M:%S+12:00") if cdate else "",
+                        "kind": ctype,
+                    }
+                )
                 continue
-            clist.append({
-                "id": int(txt(c, "wp:comment_id") or 0),
-                "author": unescape(txt(c, "wp:comment_author").strip()),
-                "author_url": txt(c, "wp:comment_author_url").strip(),
-                "date": cdate.strftime("%Y-%m-%dT%H:%M:%S+12:00") if cdate else "",
-                "parent": int(txt(c, "wp:comment_parent") or 0),
-                "content": html_to_md(txt(c, "wp:comment_content")),
-            })
+            clist.append(
+                {
+                    "id": int(txt(c, "wp:comment_id") or 0),
+                    "author": unescape(txt(c, "wp:comment_author").strip()),
+                    "author_url": txt(c, "wp:comment_author_url").strip(),
+                    "date": cdate.strftime("%Y-%m-%dT%H:%M:%S+12:00") if cdate else "",
+                    "parent": int(txt(c, "wp:comment_parent") or 0),
+                    "content": html_to_md(txt(c, "wp:comment_content")),
+                }
+            )
         if clist:
             clist.sort(key=lambda x: x["id"])
-            with open(os.path.join(ROOT, "data/comments", f"{post_id}.json"),
-                      "w", encoding="utf-8") as fh:
+            with open(
+                os.path.join(ROOT, "data/comments", f"{post_id}.json"), "w", encoding="utf-8"
+            ) as fh:
                 json.dump(clist, fh, ensure_ascii=False, indent=1)
             comments_total += len(clist)
         if plist:
             plist.sort(key=lambda x: x["date"])
-            with open(os.path.join(ROOT, "data/pingbacks", f"{post_id}.json"),
-                      "w", encoding="utf-8") as fh:
+            with open(
+                os.path.join(ROOT, "data/pingbacks", f"{post_id}.json"), "w", encoding="utf-8"
+            ) as fh:
                 json.dump(plist, fh, ensure_ascii=False, indent=1)
             pingbacks_total += len(plist)
 
@@ -228,8 +243,10 @@ def main(xml_path):
         for url in sorted(media_map):
             fh.write(f"{url}\t{media_map[url]}\n")
 
-    print(f"posts={posts} pages={pages} comments={comments_total} "
-          f"pingbacks={pingbacks_total} menu={len(menu)} media_refs={len(media_map)}")
+    print(
+        f"posts={posts} pages={pages} comments={comments_total} "
+        f"pingbacks={pingbacks_total} menu={len(menu)} media_refs={len(media_map)}"
+    )
 
 
 if __name__ == "__main__":

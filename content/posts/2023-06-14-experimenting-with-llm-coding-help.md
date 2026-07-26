@@ -39,14 +39,18 @@ def custom_redirect(request):
 In your `urls.py` file, map the custom redirect function to the Django login view:  
   
 ```python  
-from django.contrib.auth.views import LoginView  
-from .views import custom_redirect  
-  
-urlpatterns = [  
-    # Other URL patterns...  
-    path('login/', LoginView.as_view(redirect_authenticated_user=True, template_name='login.html'), name='login'),  
-    path('redirect/', custom_redirect, name='custom_redirect'),  
-]  
+from django.contrib.auth.views import LoginView
+from .views import custom_redirect
+
+urlpatterns = [
+    # Other URL patterns...
+    path(
+        "login/",
+        LoginView.as_view(redirect_authenticated_user=True, template_name="login.html"),
+        name="login",
+    ),
+    path("redirect/", custom_redirect, name="custom_redirect"),
+]
 ```  
   
 Note that in the above code, we're using Django's built-in `LoginView` and setting the `redirect_authenticated_user` parameter to `True` to automatically redirect authenticated users to the `custom_redirect` URL. We're also specifying the path to the login template using the `template_name` parameter.  
@@ -54,11 +58,12 @@ Note that in the above code, we're using Django's built-in `LoginView` and setti
 Finally, update your user model to include the `redirect_url` field:  
   
 ```python  
-from django.db import models  
-from django.contrib.auth.models import AbstractUser  
-  
-class CustomUser(AbstractUser):  
-    redirect_url = models.CharField(max_length=255, blank=True, null=True)  
+from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+
+class CustomUser(AbstractUser):
+    redirect_url = models.CharField(max_length=255, blank=True, null=True)
 ```  
   
 Now when a user logs in, they will be redirected to the URL specified in the `redirect_url` field of their user model.
