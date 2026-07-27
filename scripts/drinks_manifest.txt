@@ -12,3 +12,4 @@ lewis-road-boysenberry-cheesecake	https://lewisroadcreamery.co.nz/products/boyse
 aroha-coes-cloudy-lemonade	https://arohadrinks.co.nz/products/coes-cloudy-lemonade
 love-muscle-pineapple-sparkling-protein-water	https://lovemuscle.co.nz/products/pineapple-sparkling-protein-water
 nz-natural-juice-apple	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/nz-natural-juice-nfc-apple-juice-250ml-12-bottles-pack-old
+wests-pineapple-and-pear	https://wests.co.nz/products/pineapple-pear
