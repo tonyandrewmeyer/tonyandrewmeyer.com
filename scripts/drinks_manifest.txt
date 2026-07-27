@@ -13,3 +13,4 @@ aroha-coes-cloudy-lemonade	https://arohadrinks.co.nz/products/coes-cloudy-lemona
 love-muscle-pineapple-sparkling-protein-water	https://lovemuscle.co.nz/products/pineapple-sparkling-protein-water
 nz-natural-juice-apple	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/nz-natural-juice-nfc-apple-juice-250ml-12-bottles-pack-old
 wests-pineapple-and-pear	https://wests.co.nz/products/pineapple-pear
+good-morning-juice-apple-blueberry	https://www.nzjuice.co.nz/collections/good-morning-juice/products/good-morning-juice-apple-blueberry-single-bottle
