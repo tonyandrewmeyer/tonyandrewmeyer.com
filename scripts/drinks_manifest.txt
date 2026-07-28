@@ -15,3 +15,4 @@ nz-natural-juice-apple	https://www.nzjuice.co.nz/collections/nz-natural-juice/pr
 wests-pineapple-and-pear	https://wests.co.nz/products/pineapple-pear
 good-morning-juice-apple-blueberry	https://www.nzjuice.co.nz/collections/good-morning-juice/products/good-morning-juice-apple-blueberry-single-bottle
 nz-natural-juice-orange	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/nz-natural-juice-nfc-orange-juice-250ml-12-bottles-pack
+picky-apple-and-pear	https://wearepicky.co.nz/products/picky-apple-pear-juice
