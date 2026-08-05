@@ -27,7 +27,7 @@ Last time: [Foxton Fizz, Raspberry](https://tonyandrewmeyer.com/2026/08/05/foxto
 
 800mL plastic bottle. I bought this one from New World, but these are generally available at Woolworths too.
 
-Apple, mango, pineapple, banana, and passionfruit - and I can pick out each of thise tastes. It's a nice thickness for a pre-made smoothie: substantial enough to feel like a smoothie rather than a thick juice, without being so heavy that you struggle to get through a glass.
+Apple, mango, pineapple, banana, and passionfruit - and I can pick out each of those tastes. It's a nice thickness for a pre-made smoothie: substantial enough to feel like a smoothie rather than a thick juice, without being so heavy that you struggle to get through a glass.
 
 These are nice to have around for when it's easier to grab a pre-made smoothie than to make one myself, and this is more fruit than I would normally have available at any one time. It makes a great breakfast - but it's not something I would grab at any random point in the day.
 
