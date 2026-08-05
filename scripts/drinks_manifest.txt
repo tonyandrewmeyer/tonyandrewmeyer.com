@@ -19,3 +19,4 @@ picky-apple-and-pear	https://wearepicky.co.nz/products/picky-apple-pear-juice
 aroha-coes-crafted-cola	https://arohadrinks.co.nz/products/coes-cola-12-x-330-mls
 six-barrel-ginger-ale	https://www.sixbarrelsoda.co/products/ginger-ale-15-x-330ml
 foxton-fizz-lime	https://foxtonfizz.com/products/lime
+foxton-fizz-orange	https://foxtonfizz.com/products/orange
