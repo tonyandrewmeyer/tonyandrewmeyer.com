@@ -21,3 +21,4 @@ six-barrel-ginger-ale	https://www.sixbarrelsoda.co/products/ginger-ale-15-x-330m
 foxton-fizz-lime	https://foxtonfizz.com/products/lime
 foxton-fizz-orange	https://foxtonfizz.com/products/orange
 aroha-apple-and-pear	https://arohadrinks.co.nz/products/aroha-still-apple-pear-330ml-x-12
+foxton-fizz-raspberry	https://foxtonfizz.com/products/raspberry
