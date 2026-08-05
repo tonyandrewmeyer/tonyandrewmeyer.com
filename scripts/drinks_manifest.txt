@@ -20,3 +20,4 @@ aroha-coes-crafted-cola	https://arohadrinks.co.nz/products/coes-cola-12-x-330-ml
 six-barrel-ginger-ale	https://www.sixbarrelsoda.co/products/ginger-ale-15-x-330ml
 foxton-fizz-lime	https://foxtonfizz.com/products/lime
 foxton-fizz-orange	https://foxtonfizz.com/products/orange
+aroha-apple-and-pear	https://arohadrinks.co.nz/products/aroha-still-apple-pear-330ml-x-12
