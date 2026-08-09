@@ -24,3 +24,4 @@ aroha-apple-and-pear	https://arohadrinks.co.nz/products/aroha-still-apple-pear-3
 foxton-fizz-raspberry	https://foxtonfizz.com/products/raspberry
 picky-tropical-smoothie	https://wearepicky.co.nz/products/picky-tropical-smoothie
 picky-hydrate-berry	https://wearepicky.co.nz/products/berry
+good-juju-lemonade	https://www.goodjujusoda.com/products/lemonade
