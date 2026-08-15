@@ -26,3 +26,4 @@ picky-tropical-smoothie	https://wearepicky.co.nz/products/picky-tropical-smoothi
 picky-hydrate-berry	https://wearepicky.co.nz/products/berry
 good-juju-lemonade	https://www.goodjujusoda.com/products/lemonade
 picky-hydrate-orange-and-mango	https://wearepicky.co.nz/products/orange-mango
+wai-manuka	https://waimanuka.co.nz/products/wai-manuka
