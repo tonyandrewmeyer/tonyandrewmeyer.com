@@ -20,7 +20,7 @@ drink:
     - "Woolworths"
 ---
 
-*(Post theme: [Everyone's A Star! by Five Seconds of Summer](https://music.apple.com/nz/album/everyones-a-star/1850324993?i=1850324995&l=en-GB))*
+*(Post theme: [Everyone's A Star! by 5 Seconds of Summer](https://music.apple.com/nz/album/everyones-a-star/1850324993?i=1850324995&l=en-GB))*
 
 Last time: [Wai Mānuka Sparkling](https://tonyandrewmeyer.com/2026/08/15/wai-manuka/), this time: [Picky Apple & Feijoa](https://wearepicky.co.nz/products/picky-apple-feijoa-juice).
 
