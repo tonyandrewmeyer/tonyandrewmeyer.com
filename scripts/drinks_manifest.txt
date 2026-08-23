@@ -32,3 +32,4 @@ st-andrews-passionade	https://limes.co.nz/products/passionade-sparkling-soda
 karma-drinks-lemmy-lemonade	https://karmadrinks.co.nz/products/available-now-lemmy-lemonade-330ml-12pk-cans
 benjer-orange	https://benjer.co.nz/product/benjer-orange/
 karma-drinks-karma-cola	https://karmadrinks.co.nz/products/available-now-karma-cola-330ml-12pk-cans
+benjer-boysenberry-and-apple	https://benjer.co.nz/product/benjer-boysenberry-apple/
