@@ -34,3 +34,4 @@ benjer-orange	https://benjer.co.nz/product/benjer-orange/
 karma-drinks-karma-cola	https://karmadrinks.co.nz/products/available-now-karma-cola-330ml-12pk-cans
 benjer-boysenberry-and-apple	https://benjer.co.nz/product/benjer-boysenberry-apple/
 good-shit-ginger	https://lovegoodshit.com/products/good-sh-t-ginger
+benjer-raspberry-and-apple	https://benjer.co.nz/product/benjer-raspberry-apple/
