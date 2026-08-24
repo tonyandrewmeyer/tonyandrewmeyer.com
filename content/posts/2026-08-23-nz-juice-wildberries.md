@@ -7,7 +7,7 @@ tags:
   - "drink"
   - "review"
 drink:
-  photo: "/uploads/drinks/nz-natural-juice-wildberries.jpg"
+  photo: "/uploads/drinks/nz-juice-wildberries.jpg"
   producer: "NZ Juice"
   product: "Wildberries"
   type: "juice"
