@@ -38,3 +38,4 @@ benjer-raspberry-and-apple	https://benjer.co.nz/product/benjer-raspberry-apple/
 nz-juice-wildberries	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/nz-natural-juice-nfc-wildberry-juice-250ml-12-bottles-pack
 good-juju-raspberry	https://www.goodjujusoda.com/products/raspberry-soda
 skinny-fizz-raspberry	https://skinnyfizz.co.nz/products/raspberry
+six-barrel-lemonade	https://www.sixbarrelsoda.co/products/lemonade-15x330ml
