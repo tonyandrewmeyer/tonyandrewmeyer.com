@@ -53,6 +53,10 @@ enableEmoji = true
     user_id = "2229155"  # numeric id from goodreads.com/user/show/<id>-name
     shelf = "read"
     count = 5
+    # The feed defaults to shelf-entry recency, which floats long-ago reads to
+    # the top whenever an old entry is edited. Sort by read date instead.
+    sort = "date_read"
+    order = "d"
   [params.elsewhere.flickr]
     # Prefer nsid (12345678@N00) when known; otherwise the build resolves it
     # from the photostream page at https://flickr.com/photos/<user>/.

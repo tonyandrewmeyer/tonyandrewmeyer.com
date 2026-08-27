@@ -12,7 +12,10 @@
     {{- with .user_id -}}
       {{- $shelf := $cfg.goodreads.shelf | default "read" -}}
       {{- $n := $cfg.goodreads.count | default $default -}}
-      {{- $reads = partial "feed-items.html" (dict "url" (printf "https://www.goodreads.com/review/list_rss/%s?shelf=%s" . $shelf) "count" $n) -}}
+      {{- $url := printf "https://www.goodreads.com/review/list_rss/%s?shelf=%s" . $shelf -}}
+      {{- with $cfg.goodreads.sort -}}{{- $url = printf "%s&sort=%s" $url . -}}{{- end -}}
+      {{- with $cfg.goodreads.order -}}{{- $url = printf "%s&order=%s" $url . -}}{{- end -}}
+      {{- $reads = partial "feed-items.html" (dict "url" $url "count" $n) -}}
     {{- end -}}
   {{- end -}}
   {{- with .letterboxd -}}
