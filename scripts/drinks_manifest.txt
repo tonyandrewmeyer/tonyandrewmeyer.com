@@ -40,3 +40,4 @@ good-juju-raspberry	https://www.goodjujusoda.com/products/raspberry-soda
 skinny-fizz-raspberry	https://skinnyfizz.co.nz/products/raspberry
 six-barrel-lemonade	https://www.sixbarrelsoda.co/products/lemonade-15x330ml
 nz-juice-gold-peach	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/nz-natural-juice-nfc-gold-peach-juice-250ml-12-bottles-pack
+skinny-fizz-lime	https://skinnyfizz.co.nz/products/lime
