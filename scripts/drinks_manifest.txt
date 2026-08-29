@@ -41,3 +41,4 @@ skinny-fizz-raspberry	https://skinnyfizz.co.nz/products/raspberry
 six-barrel-lemonade	https://www.sixbarrelsoda.co/products/lemonade-15x330ml
 nz-juice-gold-peach	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/nz-natural-juice-nfc-gold-peach-juice-250ml-12-bottles-pack
 skinny-fizz-lime	https://skinnyfizz.co.nz/products/lime
+picky-hydrate-lemon-and-lime	https://wearepicky.co.nz/products/lemon-lime
