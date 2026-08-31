@@ -44,3 +44,4 @@ skinny-fizz-lime	https://skinnyfizz.co.nz/products/lime
 picky-hydrate-lemon-and-lime	https://wearepicky.co.nz/products/lemon-lime
 karma-drinks-gingerella	https://karmadrinks.co.nz/products/available-now-gingerella-ginger-ale-330ml-12pk-cans
 petes-natural-feijoa-lemonade	https://petesnatural.co.nz/shop/feijoa-lemonade-12-pack-cans/
+nz-juice-feijoa	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/nz-natural-juice-nfc-feijoa-juice-250ml-12-bottles-pack
