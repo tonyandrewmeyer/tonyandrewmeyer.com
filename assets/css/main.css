@@ -25,7 +25,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
-.wrap, .layout { max-width: var(--max); margin: 0 auto; padding: 0 1.1rem; }
+.wrap, .layout { margin: 0 auto; padding: 0 1.1rem; }
+/* The header and footer keep the same width on every page, so they don't
+   shift when moving to/from a page without a sidebar (e.g. drinks). */
+.wrap { max-width: var(--wide); }
+.layout { max-width: var(--max); }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 img { max-width: 100%; height: auto; }
@@ -55,7 +59,6 @@ blockquote { margin: 1rem 0; padding: .2rem 1rem; border-left: 3px solid var(--b
 
 .layout { padding-top: 2rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.4rem; align-items: start; }
 .content { min-width: 0; }
-body:has(.sidebar) .wrap,
 body:has(.sidebar) .layout { max-width: var(--wide); }
 body:has(.sidebar) .layout { grid-template-columns: minmax(0, 1fr) 14rem; }
 @media (max-width: 52rem) {
