@@ -47,3 +47,4 @@ petes-natural-feijoa-lemonade	https://petesnatural.co.nz/shop/feijoa-lemonade-12
 nz-juice-feijoa	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/nz-natural-juice-nfc-feijoa-juice-250ml-12-bottles-pack
 six-barrel-cola-six	https://www.sixbarrelsoda.co/products/cola-six-330ml
 st-andrews-limonade	https://limes.co.nz/products/limonade-sparkling-soda
+skinny-fizz-lemon	https://skinnyfizz.co.nz/products/lemon
