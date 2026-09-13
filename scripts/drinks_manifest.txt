@@ -48,3 +48,4 @@ nz-juice-feijoa	https://www.nzjuice.co.nz/collections/nz-natural-juice/products/
 six-barrel-cola-six	https://www.sixbarrelsoda.co/products/cola-six-330ml
 st-andrews-limonade	https://limes.co.nz/products/limonade-sparkling-soda
 skinny-fizz-lemon	https://skinnyfizz.co.nz/products/lemon
+barrier-buzz-cola	https://theaoteacompany.co.nz/products/barrier-buzz-cola
