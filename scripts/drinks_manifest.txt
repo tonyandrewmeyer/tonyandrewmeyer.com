@@ -51,3 +51,4 @@ skinny-fizz-lemon	https://skinnyfizz.co.nz/products/lemon
 barrier-buzz-cola	https://theaoteacompany.co.nz/products/barrier-buzz-cola
 picky-feijoa-smoothie	https://wearepicky.co.nz/products/picky-feijoa-smoothie
 barrier-buzz-raspberry-lemonade	https://theaoteacompany.co.nz/products/barrier-buzz-raspberry-lemonade-box-of-12-3-75-each
+lewis-road-lime-milkshake	https://lewisroadcreamery.co.nz/products/lime-milkshake
