@@ -55,3 +55,4 @@ lewis-road-lime-milkshake	https://lewisroadcreamery.co.nz/products/lime-milkshak
 homegrown-feijoa-smoothie	https://www.homegrownjuice.co.nz/raw-cold-pasteurised-range.html
 clean-collective-energy-pineapple	https://cleancollective.co.nz/products/energy-pineapple
 lewis-road-caramel-butterscotch	https://lewisroadcreamery.co.nz/products/caramel-butterscotch
+clean-collective-energy-forest-berry	https://cleancollective.co.nz/products/energy-forest-berry
