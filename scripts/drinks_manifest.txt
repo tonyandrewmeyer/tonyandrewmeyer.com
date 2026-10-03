@@ -54,3 +54,4 @@ barrier-buzz-raspberry-lemonade	https://theaoteacompany.co.nz/products/barrier-b
 lewis-road-lime-milkshake	https://lewisroadcreamery.co.nz/products/lime-milkshake
 homegrown-feijoa-smoothie	https://www.homegrownjuice.co.nz/raw-cold-pasteurised-range.html
 clean-collective-energy-pineapple	https://cleancollective.co.nz/products/energy-pineapple
+lewis-road-caramel-butterscotch	https://lewisroadcreamery.co.nz/products/caramel-butterscotch
