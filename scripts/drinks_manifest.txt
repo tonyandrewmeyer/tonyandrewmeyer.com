@@ -53,3 +53,4 @@ picky-feijoa-smoothie	https://wearepicky.co.nz/products/picky-feijoa-smoothie
 barrier-buzz-raspberry-lemonade	https://theaoteacompany.co.nz/products/barrier-buzz-raspberry-lemonade-box-of-12-3-75-each
 lewis-road-lime-milkshake	https://lewisroadcreamery.co.nz/products/lime-milkshake
 homegrown-feijoa-smoothie	https://www.homegrownjuice.co.nz/raw-cold-pasteurised-range.html
+clean-collective-energy-pineapple	https://cleancollective.co.nz/products/energy-pineapple
