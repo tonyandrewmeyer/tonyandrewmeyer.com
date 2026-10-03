@@ -182,6 +182,7 @@ body:has(.drinks) .layout { max-width: var(--wide); }
 .drinks-stats dt { color: var(--muted); font-size: .85rem; margin: 0; }
 .drinks-stats dd { margin: 0; font-weight: 600; }
 .drinks-filters { margin: 1rem 0; font-size: .9rem; color: var(--muted); }
+.drinks-filters label + label { margin-left: 1rem; }
 .drinks-filters select { font: inherit; padding: .2rem .4rem; margin-left: .3rem; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: 4px; }
 .drinks-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
 .drinks-table th, .drinks-table td { padding: .45rem .5rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }

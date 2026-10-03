@@ -26,7 +26,7 @@ Install Hugo **extended** (>= 0.148): https://gohugo.io/installation/
 | `static/images/hero.jpg` | home-page hero banner (replace with any image; layout in `layouts/index.html`) |
 | `layouts/shortcodes/deadlink.html` | inline placeholder for files no longer hosted |
 | `content/drinks.md` | the `/drinks/` tracker page (renders from post front matter) |
-| `layouts/_default/drinks.html` | tracker table layout (sortable, type-filterable) |
+| `layouts/_default/drinks.html` | tracker table layout (sortable, filterable by type and brand) |
 | `static/uploads/drinks/` | product thumbnails for the drinks tracker |
 | `scripts/convert.py` | the WXR-to-Hugo converter, kept for reference |
 | `scripts/media_manifest.txt` | list of media URLs -> local paths |

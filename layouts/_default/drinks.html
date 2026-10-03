@@ -38,6 +38,16 @@
         {{ end }}
       </select>
     </label>
+    <label>Brand:
+      <select id="drink-brand-filter">
+        <option value="">All</option>
+        {{ $brands := slice }}
+        {{ range $drinks }}{{ $brands = $brands | append .Params.drink.producer }}{{ end }}
+        {{ range (sort (uniq $brands)) }}
+          <option value="{{ . }}">{{ . }}</option>
+        {{ end }}
+      </select>
+    </label>
   </div>
 
   <table class="drinks-table" id="drinks-table">
@@ -55,7 +65,7 @@
     <tbody>
       {{ range $byRating }}
         {{ $d := .Params.drink }}
-        <tr data-type="{{ $d.type }}">
+        <tr data-type="{{ $d.type }}" data-brand="{{ $d.producer }}">
           <td class="drinks-photo-cell">
             {{ with $d.photo }}
               <a href="{{ $.RelPermalink }}"><img src="{{ . | relURL }}" alt="" loading="lazy" class="drink-thumb"></a>
@@ -102,15 +112,18 @@
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doSort(); }
       });
     });
-    var filter = document.getElementById('drink-type-filter');
-    if (filter) {
-      filter.addEventListener('change', function () {
-        var v = filter.value;
-        Array.prototype.slice.call(tbody.rows).forEach(function (r) {
-          r.hidden = v && r.dataset.type !== v;
-        });
+    var typeFilter = document.getElementById('drink-type-filter');
+    var brandFilter = document.getElementById('drink-brand-filter');
+    var applyFilters = function () {
+      var t = typeFilter ? typeFilter.value : '';
+      var b = brandFilter ? brandFilter.value : '';
+      Array.prototype.slice.call(tbody.rows).forEach(function (r) {
+        r.hidden = (t && r.dataset.type !== t) || (b && r.dataset.brand !== b);
       });
-    }
+    };
+    [typeFilter, brandFilter].forEach(function (f) {
+      if (f) f.addEventListener('change', applyFilters);
+    });
   })();
 </script>
 {{ end }}
