@@ -59,3 +59,4 @@ clean-collective-energy-forest-berry	https://cleancollective.co.nz/products/ener
 no-ugly-sleep-sparkling-passionfruit	https://nougly.nz/products/sleep
 lewis-road-chocolate-milk	https://lewisroadcreamery.co.nz/products/fresh-chocolate-milk-300ml
 homegrown-pure-orange	https://www.homegrownjuice.co.nz/supermarket-products
+no-ugly-hydrate-sparkling-plum	https://nougly.nz/products/hydrate
