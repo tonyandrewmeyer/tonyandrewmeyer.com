@@ -61,3 +61,4 @@ lewis-road-chocolate-milk	https://lewisroadcreamery.co.nz/products/fresh-chocola
 homegrown-pure-orange	https://www.homegrownjuice.co.nz/supermarket-products
 no-ugly-hydrate-sparkling-plum	https://nougly.nz/products/hydrate
 homegrown-pure-orange-low-pulp	https://www.homegrownjuice.co.nz/supermarket-products
+boring-break-chocolate	https://boringmilk.com/products/boring%C2%AE-break-chocolate-6-x-1l-bottles
