@@ -8,8 +8,8 @@ tags:
   - "review"
 drink:
   photo: "/uploads/drinks/boring-break-chocolate.png"
-  producer: "Boring"
-  product: "Break Chocolate"
+  producer: "Boring Break"
+  product: "Chocolate"
   type: "milk"
   packaging: "plastic bottle"
   volume_ml: 300
