@@ -64,3 +64,4 @@ homegrown-pure-orange-low-pulp	https://www.homegrownjuice.co.nz/supermarket-prod
 boring-break-chocolate	https://boringmilk.com/products/boring%C2%AE-break-chocolate-6-x-1l-bottles
 clean-collective-energy-peach-nectarine	https://cleancollective.co.nz/products/energy-peach-nectarine
 skull-choc	https://skullmilk.nz/
+boring-break-vanilla	https://boringmilk.com/products/boring%C2%AE-break-vanilla-6-x-1l-bottles
